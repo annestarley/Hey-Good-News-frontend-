@@ -7,6 +7,7 @@ class TopNews extends React.Component {
       <div className="top-news">
         <h1>Top News</h1>
         <Article />
+        <Article />
       </div>
     )
   }
