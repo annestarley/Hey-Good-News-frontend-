@@ -19,7 +19,7 @@ class MoreTonesToggle extends Component {
     return (
       <div>
         <div>
-          <a href="#" onClick={this.toggle}>Read more...</a>
+          <a href="#" onClick={this.toggle}>See more...</a>
           <Collapse isOpen={this.state.collapse}>
             <div>
               <p id="other-tones"><strong>Emotional:</strong> anger 10.01%, disgust 8.99%, fear 10.94%, joy 53.82%</p>
