@@ -47,10 +47,15 @@ const Article = (props) => {
     topSocialTone = props.tone.social.openness
     topSocialToneName = 'openness'
   }
+  //
+  // function openInNewTab(url) {
+  //   var win = window.open(url, '_blank');
+  //   win.focus();
+  // }
 
   return (
     <div>
-      <a href="https://www.nytimes.com/2018/04/04/business/media/roseanne-ratings-abc.html"><h4><strong>{props.title}</strong></h4></a>
+      <a style={{display: "table-cell"}} href="https://www.nytimes.com/2018/04/04/business/media/roseanne-ratings-abc.html" target="_blank"><h4><strong>{props.title}</strong></h4></a>
       <p className="source-time">{props.source.name} - Published {props.publishedAt}</p>
       <p className="description">{props.description}</p>
       <div className="tones">
@@ -59,9 +64,6 @@ const Article = (props) => {
           <span className="top-tones">{topEmotionalToneName} {(topEmotionalTone * 100).toFixed(2)}% </span>
           <span className="top-tones">{topLanguageToneName} {(topLanguageTone * 100).toFixed(2)}%</span>
           <span className="top-tones">{topSocialToneName} {(topSocialTone * 100).toFixed(2)}%</span>
-          {/* <span className="top-tones">topEmotionalToneName 0.0% </span>
-          <span className="top-tones">topLanguageToneName 0.0%</span>
-          <span className="top-tones">topSocialToneName 0.0%</span> */}
         </p>
         <div id="read-more-toggle">
           <MoreTonesToggle tone={props.tone}/>
