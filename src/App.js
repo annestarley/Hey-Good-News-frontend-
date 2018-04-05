@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <TopNews />
+        <TopNews articles={this.state.articles}/>
       </div>
     )
   }

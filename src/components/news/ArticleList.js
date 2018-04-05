@@ -1,13 +1,14 @@
 import React from 'react'
 import Article from './Article'
 
-const ArticleList = () => {
+const ArticleList = (props) => {
 
   return (
     <div>
-      {/* {
-        array.map(item => <Article />)
-      } */}
+      {console.log(props.articles)}
+      {
+        props.articles.map(article => <Article {...article}/>)
+      }
     </div>
   )
 }

@@ -16,15 +16,16 @@ class MoreTonesToggle extends Component {
   }
 
   render() {
+    console.log(this.props.tone)
     return (
       <div>
         <div>
           <a href="#" onClick={this.toggle}>See more...</a>
           <Collapse isOpen={this.state.collapse}>
             <div>
-              <p id="other-tones"><strong>Emotional:</strong> anger 10.01%, disgust 8.99%, fear 10.94%, joy 53.82%</p>
-              <p><strong>Language:</strong> analytical 53.81%, confident 0.00%, tentative 65.25%</p>
-              <p><strong>Social:</strong> agreeableness 26.81%, conscientiousness 57.00%, emotionalRange 66.72%, extraversion 52.40%, openness 68.24%</p>
+              <p id="other-tones"><strong>Emotional:</strong> anger {(this.props.tone.emotion.anger * 100).toFixed(2)}%, disgust {(this.props.tone.emotion.disgust * 100).toFixed(2)}%, fear {(this.props.tone.emotion.fear * 100).toFixed(2)}%, joy {(this.props.tone.emotion.joy * 100).toFixed(2)}%</p>
+              <p><strong>Language:</strong> analytical {(this.props.tone.language.analytical * 100).toFixed(2)}%, confident {(this.props.tone.language.analytical * 100).toFixed(2)}%, tentative {(this.props.tone.language.analytical * 100).toFixed(2)}%</p>
+              <p><strong>Social:</strong> agreeableness {(this.props.tone.social.agreeableness * 100).toFixed(2)}%, conscientiousness {(this.props.tone.social.conscientiousness * 100).toFixed(2)}%, emotional range {(this.props.tone.social.emotionalRange * 100).toFixed(2)}%, extraversion {(this.props.tone.social.extraversion * 100).toFixed(2)}%, openness {(this.props.tone.social.openness * 100).toFixed(2)}%</p>
             </div>
           </Collapse>
         </div>
