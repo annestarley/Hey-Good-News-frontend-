@@ -7,7 +7,7 @@ const ArticleList = (props) => {
     <div>
       {console.log(props.articles)}
       {
-        props.articles.map(article => <Article {...article}/>)
+        props.articles.map((article) => <Article {...article}/>)
       }
     </div>
   )
