@@ -40,16 +40,22 @@ class NavbarFeatures extends React.Component {
                               <NavLink to="#">Home</NavLink>
                           </NavItem>
                           <NavItem>
-                              <NavLink to="#">Politics</NavLink>
+                              <NavLink to="#">Science</NavLink>
                           </NavItem>
                           <NavItem>
-                              <NavLink to="#">Science</NavLink>
+                              <NavLink to="#">Sports</NavLink>
                           </NavItem>
                           <NavItem>
                               <NavLink to="#">Business</NavLink>
                           </NavItem>
                           <NavItem>
                               <NavLink to="#">Entertainment</NavLink>
+                          </NavItem>
+                          <NavItem>
+                              <NavLink to="#">Health</NavLink>
+                          </NavItem>
+                          <NavItem>
+                              <NavLink to="#">Technology</NavLink>
                           </NavItem>
                           <NavItem>
                               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Akronim|Baloo|Barrio|Black+Han+Sans|Bungee+Outline|Bungee+Shade|Dokdo|Faster+One|Fredericka+the+Great|Fredoka+One|Frijole|Jua|Kirang+Haerang|Luckiest+Guy|Monofett|Rock+Salt|Slackey|Special+Elite|UnifrakturMaguntia|Yeon+Sung|Zilla+Slab+Highlight');
+
 .App {
   text-align: center;
 }
@@ -15,7 +17,34 @@
 }
 
 .App-title {
-  font-size: 2.5em;
+  font-size: 2.75em;
+  /* font-family: 'Yeon Sung', cursive;
+  font-family: 'Jua', sans-serif;
+  font-family: 'Kirang Haerang', cursive;
+  font-family: 'Dokdo', cursive;
+  font-family: 'Black Han Sans', sans-serif;
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Special Elite', cursive;
+  font-family: 'Rock Salt', cursive;
+  font-family: 'Baloo', cursive; */
+  font-family: 'Fredericka the Great', cursive; /* not bad */
+  /* font-family: 'UnifrakturMaguntia', cursive; */
+  /* font-family: 'Frijole', cursive; /*Maybe */
+  /* font-family: 'Bungee Shade', cursive; */
+  /* font-family: 'Slackey', cursive; */
+  /* font-family: 'Zilla Slab Highlight', cursive; */
+  /* font-family: 'Monofett', cursive; */
+  /* font-family: 'Barrio', cursive; */
+  /* font-family: 'Bungee Outline', cursive; */
+}
+
+.subtitle {
+  font-size: 1.40em;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.orange {
+  color: orange;
 }
 
 .App-intro {
@@ -68,4 +97,10 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 900px) {
+  .subsubtitle {
+    display: none;
+  }
 }
