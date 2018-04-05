@@ -54,6 +54,8 @@
 /* My CSS */
 .top-news {
   margin: 5%;
+  max-height: 800px;
+  overflow: auto;
 }
 
 .top-news h1 {
@@ -110,6 +112,11 @@
 
 .newsAPI {
   margin-top: -10px;
+}
+
+.news-header {
+  text-align: center;
+  margin-top: 5%;
 }
 
 @keyframes App-logo-spin {
