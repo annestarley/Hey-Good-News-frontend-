@@ -94,6 +94,24 @@
   font-size: .8em;
 }
 
+.footer {
+  text-align: center;
+  color: grey;
+  font-size: 0.8em;
+}
+
+.footer a {
+  color: grey;
+}
+
+.footer a:hover {
+  color: silver;
+}
+
+.newsAPI {
+  margin-top: -10px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

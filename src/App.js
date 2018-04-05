@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios'
 import Header from './components/header/Header'
 import TopNews from './components/news/TopNews'
+import Footer from './components/footer/Footer'
 
 const backendURL = 'http://localhost:3000'
 
@@ -36,6 +37,7 @@ class App extends Component {
       <div>
         <Header />
         <TopNews articles={this.state.articles}/>
+        <Footer />
       </div>
     )
   }
