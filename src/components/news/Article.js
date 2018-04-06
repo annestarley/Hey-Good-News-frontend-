@@ -61,10 +61,14 @@ const Article = (props) => {
   let secs = currentTime[2] - publishedTime[2]
 
   let secondsTotal = hours*3600 + mins*60 + secs
-  let hoursFinal = Math.floor(secondsTotal/3600) - 1
-  let minutes = secondsTotal%3600
-  minutes = Math.floor(minutes/60)
-  let seconds = minutes%60
+  let hoursFinal = Math.floor(secondsTotal/3600)
+  secondsTotal -= hoursFinal * 3600
+  console.log(hoursFinal);
+  // let minutes = secondsTotal%3600
+  console.log(minutes);
+  let minutes = Math.floor(secondsTotal/60)
+  console.log(minutes);
+  let seconds = secondsTotal - (minutes * 60)
 
   if (hoursFinal == 0) hoursFinal = ''
   else if (hoursFinal == 1) hoursFinal = '1 hour'
