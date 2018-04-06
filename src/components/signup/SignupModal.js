@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button, Modal, ModalBody, ModalHeader, ModalFooter, Input } from 'mdbreact';
 
+let validator = require('email-validator')
 
 class SignupModal extends React.Component {
   constructor(props) {
@@ -19,6 +20,14 @@ class SignupModal extends React.Component {
     });
   }
 
+  toggleClose() {
+    this.toggle()
+  }
+
+  toggleSaveChanges() {
+    this.toggle()
+  }
+
   render() {
     return (
       <div>
@@ -31,8 +40,8 @@ class SignupModal extends React.Component {
             <Input label="Example label" icon="envelope" />
           </ModalBody>
           <ModalFooter>
-            <Button color="secondary" onClick={this.toggle}>Close</Button>{' '}
-            <Button color="primary" onClick={this.toggle}>Save changes</Button>
+            <Button color="secondary" onClick={this.toggleClose}>Close</Button>{' '}
+            <Button color="primary" onClick={this.toggleSaveChanges}>Save changes</Button>
           </ModalFooter>
         </Modal>
       </div>

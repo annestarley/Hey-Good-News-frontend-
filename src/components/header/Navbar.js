@@ -28,55 +28,57 @@ class NavbarFeatures extends React.Component {
 
     render() {
         return (
-          <Navbar color="black" dark expand="md" scrolling>
-              {/* <NavbarBrand href="/">
-                  <strong>Navbar</strong>
-              </NavbarBrand> */}
-              { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
-              <Collapse isOpen = { this.state.collapse } navbar>
-                  <NavbarNav left>
-                    <NavItem active>
-                        <NavLink to="/top-news">Home</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink to="/science">Science</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink to="/sports">Sports</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink to="/business">Business</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink to="/entertainment">Entertainment</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink to="/health">Health</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink to="/technology">Technology</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                        <DropdownToggle nav caret>Dropdown</DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem href="#">Action</DropdownItem>
-                            <DropdownItem href="#">Another Action</DropdownItem>
-                            <DropdownItem href="#">Something else here</DropdownItem>
-                            <DropdownItem href="#">Something else here</DropdownItem>
-                        </DropdownMenu>
-                        </Dropdown>
-                    </NavItem>
-                  </NavbarNav>
-                  {/* <NavbarNav right>
-                    <NavItem>
-                      <form className="form-inline md-form mt-0">
-                        <input className="form-control mr-sm-2 mb-0 text-white" type="text" placeholder="Search" aria-label="Search"/>
-                      </form>
-                    </NavItem>
-                  </NavbarNav> */}
-              </Collapse>
-          </Navbar>
+          <div className="top-navbar">
+            <Navbar color="black" dark expand="md" scrolling>
+                {/* <NavbarBrand href="/">
+                    <strong>Navbar</strong>
+                </NavbarBrand> */}
+                { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
+                <Collapse isOpen = { this.state.collapse } navbar>
+                    <NavbarNav left>
+                      <NavItem active>
+                          <NavLink to="/top-news">Home</NavLink>
+                      </NavItem>
+                      <NavItem>
+                          <NavLink to="/science">Science</NavLink>
+                      </NavItem>
+                      <NavItem>
+                          <NavLink to="/sports">Sports</NavLink>
+                      </NavItem>
+                      <NavItem>
+                          <NavLink to="/business">Business</NavLink>
+                      </NavItem>
+                      <NavItem>
+                          <NavLink to="/entertainment">Entertainment</NavLink>
+                      </NavItem>
+                      <NavItem>
+                          <NavLink to="/health">Health</NavLink>
+                      </NavItem>
+                      <NavItem>
+                          <NavLink to="/technology">Technology</NavLink>
+                      </NavItem>
+                      <NavItem>
+                          <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                          <DropdownToggle nav caret>Dropdown</DropdownToggle>
+                          <DropdownMenu>
+                              <DropdownItem href="#">Action</DropdownItem>
+                              <DropdownItem href="#">Another Action</DropdownItem>
+                              <DropdownItem href="#">Something else here</DropdownItem>
+                              <DropdownItem href="#">Something else here</DropdownItem>
+                          </DropdownMenu>
+                          </Dropdown>
+                      </NavItem>
+                    </NavbarNav>
+                    {/* <NavbarNav right>
+                      <NavItem>
+                        <form className="form-inline md-form mt-0">
+                          <input className="form-control mr-sm-2 mb-0 text-white" type="text" placeholder="Search" aria-label="Search"/>
+                        </form>
+                      </NavItem>
+                    </NavbarNav> */}
+                </Collapse>
+            </Navbar>
+          </div>
         );
     }
 }
