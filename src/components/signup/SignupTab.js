@@ -1,11 +1,11 @@
 import React from 'react'
-// import ModalPage from './signupModal'
+import SignupModal from './SignupModal'
 
 const SignupTab = () => {
   return (
     <div className='signup-tab'>
-      <p>Sign up to recieve daily 'joyful' news article?</p>
-      {/* <SignupModal /> */}
+      <p>Need some good news? Sign up to recieve a daily 'joyful' news article!</p>
+      <SignupModal />
     </div>
   )
 }
