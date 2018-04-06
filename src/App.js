@@ -15,15 +15,16 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      articles: []
+      articles: [],
+      searchParameter: '',
     }
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.getTopArticles()
   }
 
-  getTopArticles() {
+  getTopArticles = () => {
     axios.get(`${backendURL}/top-articles`)
       .then(res => {
         console.log(res.data)
@@ -36,15 +37,23 @@ class App extends Component {
       })
   }
 
+  setSearchParameter = (e) => {
+    let searchParameter = e.target.value
+    console.log('searchParameter', searchParameter)
+    this.setState({
+      searchParameter: searchParameter
+    })
+  }
+
   topNews() {
     return (
       <div>
-        <Header />
+        <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top News</h1>
         <div className='row'>
           <div className="col-md-8">
             <div className="top-news">
-              <TopNews articles={this.state.articles}/>
+              <TopNews articles={this.state.articles} />
             </div>
           </div>
           <div className="col-md-3">
@@ -59,7 +68,7 @@ class App extends Component {
   science() {
     return (
       <div>
-        <Header />
+        <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Science News</h1>
         <AdditionalNews category="science"/>
         <Footer />
@@ -70,7 +79,7 @@ class App extends Component {
   sports() {
     return (
       <div>
-        <Header />
+        <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Sports News</h1>
         <AdditionalNews category="sports"/>
         <Footer />
@@ -81,7 +90,7 @@ class App extends Component {
   business() {
     return (
       <div>
-        <Header />
+        <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Business News</h1>
         <AdditionalNews category="business"/>
         <Footer />
@@ -92,7 +101,7 @@ class App extends Component {
   entertainment () {
     return (
       <div>
-        <Header />
+        <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Entertainment News</h1>
         <AdditionalNews category="entertainment"/>
         <Footer />
@@ -103,7 +112,7 @@ class App extends Component {
   health () {
     return (
       <div>
-        <Header />
+        <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Health News</h1>
         <AdditionalNews category="health"/>
         <Footer />
@@ -114,7 +123,7 @@ class App extends Component {
   technology () {
     return (
       <div>
-        <Header />
+        <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Technology News</h1>
         <AdditionalNews category="technology"/>
         <Footer />
@@ -124,32 +133,34 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <Route exact path="/" component={IntroPage} />
-          <Route path="/top-news" render={() => {
-            return this.topNews()
-          }}/>
-          <Route path="/science" render={() => {
-            return this.science()
-          }}/>
-          <Route path="/sports" render={() => {
-            return this.sports()
-          }}/>
-          <Route path="/business" render={() => {
-            return this.business()
-          }}/>
-          <Route path="/entertainment" render={() => {
-            return this.entertainment()
-          }}/>
-          <Route path="/health" render={() => {
-            return this.health()
-          }}/>
-          <Route path="/technology" render={() => {
-            return this.technology()
-          }}/>
-        </div>
-      </BrowserRouter>
+      <div>
+        <BrowserRouter>
+          <div>
+            <Route exact path="/" component={IntroPage} />
+            <Route path="/top-news" render={() => {
+              return this.topNews()
+            }}/>
+            <Route path="/science" render={() => {
+              return this.science()
+            }}/>
+            <Route path="/sports" render={() => {
+              return this.sports()
+            }}/>
+            <Route path="/business" render={() => {
+              return this.business()
+            }}/>
+            <Route path="/entertainment" render={() => {
+              return this.entertainment()
+            }}/>
+            <Route path="/health" render={() => {
+              return this.health()
+            }}/>
+            <Route path="/technology" render={() => {
+              return this.technology()
+            }}/>
+          </div>
+        </BrowserRouter>
+      </div>
     )
   }
 }

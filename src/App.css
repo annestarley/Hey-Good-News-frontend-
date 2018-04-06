@@ -140,6 +140,9 @@
   margin-top: 15%;
 }
 
+.YourHighlightClass {
+  background-color: moccasin;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

@@ -1,7 +1,7 @@
 import React from 'react'
 import NavbarFeatures from './Navbar'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="App">
       <header className="App-header">
@@ -9,7 +9,7 @@ const Header = () => {
         <p className="subtitle">The news aggregator with news 'tudes'.</p>
         <p className="subsubtitle">View the tone overall tone of a top news article before you decide if you would like to read on.</p>
       </header>
-      <NavbarFeatures />
+      <NavbarFeatures setSearchParameter={props.setSearchParameter}/>
     </div>
   );
 }

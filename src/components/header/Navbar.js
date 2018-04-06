@@ -72,7 +72,7 @@ class NavbarFeatures extends React.Component {
                     <NavbarNav right>
                       <NavItem>
                         <form className="form-inline md-form mt-0">
-                          <input className="form-control mr-sm-2 mb-0 text-white" type="text" placeholder="Search top tones" aria-label="Search"/>
+                          <input className="form-control mr-sm-2 mb-0 text-white" type="text" placeholder="Search top tones" aria-label="Search" onChange={this.props.setSearchParameter}/>
                         </form>
                       </NavItem>
                     </NavbarNav>

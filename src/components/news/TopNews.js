@@ -9,8 +9,7 @@ class TopNews extends React.Component {
   render() {
     return (
       <div>
-        <ArticleList articles={this.props.articles}/>
-        {/* <TempArticleList />
+        {/* <ArticleList articles={this.props.articles}/> */}
         <TempArticleList />
         <TempArticleList />
         <TempArticleList />
@@ -19,7 +18,8 @@ class TopNews extends React.Component {
         <TempArticleList />
         <TempArticleList />
         <TempArticleList />
-        <TempArticleList /> */}
+        <TempArticleList />
+        <TempArticleList />
       </div>
     )
   }

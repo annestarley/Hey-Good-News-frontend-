@@ -1,6 +1,9 @@
 import React from 'react'
 import TempTonesToggle from './TempTonesToggle'
 
+import Highlighter from 'react-highlight-words'
+
+
 
 const TempArticleList = () => {
   return (
@@ -11,9 +14,30 @@ const TempArticleList = () => {
       <div className="tones">
         <p>
           <span className="top-tones">Top tones:</span>
-          <span className="top-tones">joy 20.95% </span>
-          <span className="top-tones">confident 79.90%</span>
-          <span className="top-tones">emotional range 90.61%</span>
+          <span className="top-tones">
+            <Highlighter
+              highlightClassName="YourHighlightClass"
+              searchWords={["joy"]}
+              autoEscape={true}
+              textToHighlight="joy 20.95%"
+            />
+          </span>
+          <span className="top-tones">
+            <Highlighter
+              highlightClassName="YourHighlightClass"
+              searchWords={["joy"]}
+              autoEscape={true}
+              textToHighlight="confident 79.90%"
+            />
+          </span>
+          <span className="top-tones">
+            <Highlighter
+              highlightClassName="YourHighlightClass"
+              searchWords={["joy"]}
+              autoEscape={true}
+              textToHighlight="emotional range 90.61%"
+            />
+          </span>
         </p>
         <div id="read-more-toggle">
           <TempTonesToggle />
