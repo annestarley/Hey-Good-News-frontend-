@@ -43,9 +43,10 @@ class App extends Component {
     this.setState({
       searchParameter: searchParameter
     })
+    console.log('state', this.state.searchParameter)
   }
 
-  topNews() {
+  topNews = () => {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
@@ -53,7 +54,7 @@ class App extends Component {
         <div className='row'>
           <div className="col-md-8">
             <div className="top-news">
-              <TopNews articles={this.state.articles} />
+              <TopNews articles={this.state.articles} searchParameter={this.state.searchParameter} />
             </div>
           </div>
           <div className="col-md-3">
@@ -65,67 +66,67 @@ class App extends Component {
     )
   }
 
-  science() {
+  science = () => {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Science News</h1>
-        <AdditionalNews category="science"/>
+        <AdditionalNews category="science" searchParameter={this.state.searchParameter} />
         <Footer />
       </div>
     )
   }
 
-  sports() {
+  sports = () => {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Sports News</h1>
-        <AdditionalNews category="sports"/>
+        <AdditionalNews category="sports" searchParameter={this.state.searchParameter} />
         <Footer />
       </div>
     )
   }
 
-  business() {
+  business = () => {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Business News</h1>
-        <AdditionalNews category="business"/>
+        <AdditionalNews category="business" searchParameter={this.state.searchParameter} />
         <Footer />
       </div>
     )
   }
 
-  entertainment () {
+  entertainment = () => {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Entertainment News</h1>
-        <AdditionalNews category="entertainment"/>
+        <AdditionalNews category="entertainment" searchParameter={this.state.searchParameter} />
         <Footer />
       </div>
     )
   }
 
-  health () {
+  health = () => {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Health News</h1>
-        <AdditionalNews category="health"/>
+        <AdditionalNews category="health" searchParameter={this.state.searchParameter} />
         <Footer />
       </div>
     )
   }
 
-  technology () {
+  technology = () => {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
         <h1 className="news-header">Top Technology News</h1>
-        <AdditionalNews category="technology"/>
+        <AdditionalNews category="technology" searchParameter={this.state.searchParameter} />
         <Footer />
       </div>
     )

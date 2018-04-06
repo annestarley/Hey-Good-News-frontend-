@@ -1,28 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ArticleList from './ArticleList'
 import SignupTab from '../signup/SignupTab'
 
 import TempArticleList from './TempArticleList'
 
-class TopNews extends React.Component {
-
-  render() {
-    return (
-      <div>
-        {/* <ArticleList articles={this.props.articles}/> */}
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-      </div>
-    )
-  }
+const TopNews = (props) =>{
+  return (
+    <div>
+      {/* <ArticleList articles={this.props.articles} searchParameter={props.searchParameter/> */}
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
+    </div>
+  )
 }
 
 export default TopNews

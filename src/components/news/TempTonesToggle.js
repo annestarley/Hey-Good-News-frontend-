@@ -16,7 +16,6 @@ class TempTonesToggle extends Component {
   }
 
   render() {
-    console.log(this.props.tone)
     return (
       <div>
         <div>

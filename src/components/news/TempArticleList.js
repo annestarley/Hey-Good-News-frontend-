@@ -5,7 +5,7 @@ import Highlighter from 'react-highlight-words'
 
 
 
-const TempArticleList = () => {
+const TempArticleList = (props) => {
   return (
     <div>
       <a style={{display: "table-cell"}} href="http://www.latimes.com/business/la-fi-virgin-galactic-20180404-story.html" target="_blank"><h4><strong>Woman Claims Parents' Fertility Doctor Used His Own Sperm to Impregnate Her Mother</strong></h4></a>
@@ -17,7 +17,7 @@ const TempArticleList = () => {
           <span className="top-tones">
             <Highlighter
               highlightClassName="YourHighlightClass"
-              searchWords={["joy"]}
+              searchWords={[props.searchParameter]}
               autoEscape={true}
               textToHighlight="joy 20.95%"
             />
@@ -25,7 +25,7 @@ const TempArticleList = () => {
           <span className="top-tones">
             <Highlighter
               highlightClassName="YourHighlightClass"
-              searchWords={["joy"]}
+              searchWords={[props.searchParameter]}
               autoEscape={true}
               textToHighlight="confident 79.90%"
             />
@@ -33,7 +33,7 @@ const TempArticleList = () => {
           <span className="top-tones">
             <Highlighter
               highlightClassName="YourHighlightClass"
-              searchWords={["joy"]}
+              searchWords={[props.searchParameter]}
               autoEscape={true}
               textToHighlight="emotional range 90.61%"
             />

@@ -33,12 +33,12 @@ class AdditionalNews extends Component {
   render () {
     return (
       <div className="top-news">
-        {/* <ArticleList articles={this.state.articles}/> */}
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
+        {/* <ArticleList articles={this.state.articles} searchParameter={this.props.searchParameter} /> */}
+        <TempArticleList searchParameter={this.props.searchParameter} />
+        <TempArticleList searchParameter={this.props.searchParameter} />
+        <TempArticleList searchParameter={this.props.searchParameter} />
+        <TempArticleList searchParameter={this.props.searchParameter} />
+        <TempArticleList searchParameter={this.props.searchParameter} />
       </div>
     )
   }
