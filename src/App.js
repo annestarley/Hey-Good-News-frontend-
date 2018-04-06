@@ -6,9 +6,8 @@ import IntroPage from './components/intro/IntroPage'
 import Header from './components/header/Header'
 import TopNews from './components/news/TopNews'
 import SignupTab from './components/signup/SignupTab'
-import AdditionalNews from './components/additionalNews/AdditionalNews'
+import AdditionalNews from './components/news/AdditionalNews'
 import Footer from './components/footer/Footer'
-
 
 const backendURL = 'http://localhost:3000'
 
@@ -37,109 +36,118 @@ class App extends Component {
       })
   }
 
+  topNews() {
+    return (
+      <div>
+        <Header />
+        <h1 className="news-header">Top News</h1>
+        <div className='row'>
+          <div className="col-md-8">
+            <div className="top-news">
+              <TopNews articles={this.state.articles}/>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <SignupTab />
+          </div>
+        </div>
+        <Footer />
+      </div>
+    )
+  }
+
+  science() {
+    return (
+      <div>
+        <Header />
+        <h1 className="news-header">Top Science News</h1>
+        <AdditionalNews category="science"/>
+        <Footer />
+      </div>
+    )
+  }
+
+  sports() {
+    return (
+      <div>
+        <Header />
+        <h1 className="news-header">Top Sports News</h1>
+        <AdditionalNews category="sports"/>
+        <Footer />
+      </div>
+    )
+  }
+
+  business() {
+    return (
+      <div>
+        <Header />
+        <h1 className="news-header">Top Business News</h1>
+        <AdditionalNews category="business"/>
+        <Footer />
+      </div>
+    )
+  }
+
+  entertainment () {
+    return (
+      <div>
+        <Header />
+        <h1 className="news-header">Top Entertainment News</h1>
+        <AdditionalNews category="entertainment"/>
+        <Footer />
+      </div>
+    )
+  }
+
+  health () {
+    return (
+      <div>
+        <Header />
+        <h1 className="news-header">Top Health News</h1>
+        <AdditionalNews category="health"/>
+        <Footer />
+      </div>
+    )
+  }
+
+  technology () {
+    return (
+      <div>
+        <Header />
+        <h1 className="news-header">Top Technology News</h1>
+        <AdditionalNews category="technology"/>
+        <Footer />
+      </div>
+    )
+  }
+
   render() {
     return (
       <BrowserRouter>
         <div>
           <Route exact path="/" component={IntroPage} />
           <Route path="/top-news" render={() => {
-            return (
-              <div>
-                <Header />
-                <h1 className="news-header">Top News</h1>
-                <div className='row'>
-                  <div className="col-md-8">
-                    <div className="top-news">
-                      <TopNews articles={this.state.articles}/>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <SignupTab />
-                  </div>
-                </div>
-                <Footer />
-              </div>
-            )
+            return this.topNews()
           }}/>
           <Route path="/science" render={() => {
-            return (
-              <div>
-                <Header />
-                <h1 className="news-header">Top Science News</h1>
-                <AdditionalNews />
-                <Footer />
-              </div>
-            )
+            return this.science()
           }}/>
           <Route path="/sports" render={() => {
-            return (
-              <div>
-                <Header />
-                <h1 className="news-header">Top Sports News</h1>
-                <AdditionalNews />
-                <Footer />
-              </div>
-            )
+            return this.sports()
           }}/>
           <Route path="/business" render={() => {
-            return (
-              <div>
-                <Header />
-                <h1 className="news-header">Top Business News</h1>
-                <AdditionalNews />
-                <Footer />
-              </div>
-            )
+            return this.business()
           }}/>
           <Route path="/entertainment" render={() => {
-            return (
-              <div>
-                <Header />
-                <h1 className="news-header">Top Entertainment News</h1>
-                <AdditionalNews />
-                <Footer />
-              </div>
-            )
+            return this.entertainment()
           }}/>
           <Route path="/health" render={() => {
-            return (
-              <div>
-                <Header />
-                <h1 className="news-header">Top Health News</h1>
-                <AdditionalNews />
-                <Footer />
-              </div>
-            )
+            return this.health()
           }}/>
-          <Route path="/Technology" render={() => {
-            return (
-              <div>
-                <Header />
-                <h1 className="news-header">Top Technology News</h1>
-                <AdditionalNews />
-                <Footer />
-              </div>
-            )
+          <Route path="/technology" render={() => {
+            return this.technology()
           }}/>
-          {/* <Header />
-          <div className="row">
-            <div className="col-md-8 col-sm-12">
-              <Route path="/top-news" render={() => {
-                return (
-                  <div>
-                    <TopNews articles={this.state.articles}/>
-                  </div>
-                )
-              }}/>
-              <Route path="/science" render={() => {
-                return <TopNews articles={this.state.articles}/>
-              }}/>
-            </div>
-            <div className="col-md-4 col-sm-12">
-
-            </div>
-          </div>
-          <Footer /> */}
         </div>
       </BrowserRouter>
     )
