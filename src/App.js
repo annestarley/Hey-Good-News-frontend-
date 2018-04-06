@@ -10,6 +10,8 @@ import UserTone from './components/userTone/UserTone'
 import AdditionalNews from './components/news/AdditionalNews'
 import Footer from './components/footer/Footer'
 
+import NavbarFeatures from './components/header/Navbar'
+
 const backendURL = 'http://localhost:8000'
 
 class App extends Component {
@@ -51,6 +53,9 @@ class App extends Component {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
+        <div className="top-navbar">
+          <NavbarFeatures setSearchParameter={this.setSearchParameter}/>
+        </div>
         <h1 className="news-header">Top News</h1>
         <div className='row'>
           <div className="col-md-8">
@@ -72,6 +77,9 @@ class App extends Component {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
+        <div className="top-navbar">
+          <NavbarFeatures setSearchParameter={this.setSearchParameter}/>
+        </div>
         <h1 className="news-header">Top Science News</h1>
         <AdditionalNews category="science" searchParameter={this.state.searchParameter} />
         <Footer />
@@ -83,6 +91,9 @@ class App extends Component {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
+        <div className="top-navbar">
+          <NavbarFeatures setSearchParameter={this.setSearchParameter}/>
+        </div>
         <h1 className="news-header">Top Sports News</h1>
         <AdditionalNews category="sports" searchParameter={this.state.searchParameter} />
         <Footer />
@@ -94,6 +105,9 @@ class App extends Component {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
+        <div className="top-navbar">
+          <NavbarFeatures setSearchParameter={this.setSearchParameter}/>
+        </div>
         <h1 className="news-header">Top Business News</h1>
         <AdditionalNews category="business" searchParameter={this.state.searchParameter} />
         <Footer />
@@ -105,6 +119,9 @@ class App extends Component {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
+        <div className="top-navbar">
+          <NavbarFeatures setSearchParameter={this.setSearchParameter}/>
+        </div>
         <h1 className="news-header">Top Entertainment News</h1>
         <AdditionalNews category="entertainment" searchParameter={this.state.searchParameter} />
         <Footer />
@@ -116,6 +133,9 @@ class App extends Component {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
+        <div className="top-navbar">
+          <NavbarFeatures setSearchParameter={this.setSearchParameter}/>
+        </div>
         <h1 className="news-header">Top Health News</h1>
         <AdditionalNews category="health" searchParameter={this.state.searchParameter} />
         <Footer />
@@ -127,6 +147,9 @@ class App extends Component {
     return (
       <div>
         <Header setSearchParameter={this.setSearchParameter}/>
+        <div className="top-navbar">
+          <NavbarFeatures setSearchParameter={this.setSearchParameter}/>
+        </div>
         <h1 className="news-header">Top Technology News</h1>
         <AdditionalNews category="technology" searchParameter={this.state.searchParameter} />
         <Footer />

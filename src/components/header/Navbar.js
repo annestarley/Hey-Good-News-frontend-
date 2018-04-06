@@ -28,11 +28,12 @@ class NavbarFeatures extends React.Component {
 
     render() {
         return (
-          <div className="top-navbar">
+          <div>
             <Navbar color="black" dark expand="md" scrolling>
                 {/* <NavbarBrand href="/">
                     <strong>Navbar</strong>
                 </NavbarBrand> */}
+                {/* scrolling */}
                 { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>
                     <NavbarNav left>

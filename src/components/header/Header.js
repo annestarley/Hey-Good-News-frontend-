@@ -1,5 +1,6 @@
 import React from 'react'
 import NavbarFeatures from './Navbar'
+import { StickyContainer, Sticky } from 'react-sticky'
 
 const Header = (props) => {
   return (
@@ -9,7 +10,9 @@ const Header = (props) => {
         <p className="subtitle">The news aggregator with news 'tudes'.</p>
         <p className="subsubtitle">View the tone overall tone of a top news article before you decide if you would like to read on.</p>
       </header>
-      <NavbarFeatures setSearchParameter={props.setSearchParameter}/>
+      {/* <div className="top-navbar">
+        <NavbarFeatures setSearchParameter={props.setSearchParameter}/>
+      </div> */}
     </div>
   );
 }
