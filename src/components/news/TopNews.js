@@ -7,8 +7,7 @@ import TempArticleList from './TempArticleList'
 const TopNews = (props) =>{
   return (
     <div>
-      <ArticleList articles={props.articles} searchParameter={props.searchParameter} />
-      {/* <TempArticleList searchParameter={props.searchParameter} />
+      {/* <ArticleList articles={props.articles} searchParameter={props.searchParameter} /> */}
       <TempArticleList searchParameter={props.searchParameter} />
       <TempArticleList searchParameter={props.searchParameter} />
       <TempArticleList searchParameter={props.searchParameter} />
@@ -17,7 +16,8 @@ const TopNews = (props) =>{
       <TempArticleList searchParameter={props.searchParameter} />
       <TempArticleList searchParameter={props.searchParameter} />
       <TempArticleList searchParameter={props.searchParameter} />
-      <TempArticleList searchParameter={props.searchParameter} /> */}
+      <TempArticleList searchParameter={props.searchParameter} />
+      <TempArticleList searchParameter={props.searchParameter} />
     </div>
   )
 }

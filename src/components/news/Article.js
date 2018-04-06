@@ -70,14 +70,14 @@ const Article = (props) => {
   let minutes = Math.floor(secondsTotal/60)
   let seconds = secondsTotal - (minutes * 60)
 
-  if (hoursFinal == 0) hoursFinal = ''
-  else if (hoursFinal == 1) hoursFinal = '1 hour'
+  if (hoursFinal === 0) hoursFinal = ''
+  else if (hoursFinal === 1) hoursFinal = '1 hour'
   else hoursFinal = `${hoursFinal} hours`
-  if (minutes == 0) minutes = ''
-  else if (minutes == 1) minutes = '1 minute'
+  if (minutes === 0) minutes = ''
+  else if (minutes === 1) minutes = '1 minute'
   else minutes = `${minutes} minutes`
-  if (seconds == 0) seconds = ''
-  else if (seconds == 1) seconds = '1 secs'
+  if (seconds === 0) seconds = ''
+  else if (seconds === 1) seconds = '1 secs'
   else seconds = `${seconds} secs`
 
   let publishedTimeDifference = `${hoursFinal} ${minutes} ${seconds} ago`

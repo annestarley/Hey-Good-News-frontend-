@@ -6,7 +6,7 @@ const ArticleList = (props) => {
     <div>
       {console.log(props.articles)}
       {
-        props.articles.map((article) => <Article {...article} searchParameter={props.searchParameter}/>)
+        props.articles.map((article, i) => <Article {...article} key={i} searchParameter={props.searchParameter}/>)
       }
     </div>
   )
