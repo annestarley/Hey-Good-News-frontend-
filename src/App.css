@@ -120,10 +120,15 @@
 }
 
 .signup-tab {
-  background: orange;
+  background: black;
+  color: white;
   margin: 5%;
   text-align: center;
-  border-radius: 25%;
+  border-radius: 5%;
+  font-family: 'Fredericka the Great', cursive; /* not bad */
+  font-size: 1.3em;
+  padding: 5%;
+  margin-top: 15%;
 }
 
 @keyframes App-logo-spin {

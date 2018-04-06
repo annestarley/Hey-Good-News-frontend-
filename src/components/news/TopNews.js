@@ -10,7 +10,6 @@ class TopNews extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="news-header">Top News</h1>
         {/* <div className="row"> */}
           {/* <div className="col-md-8 col-sm-12 top-news"> */}
             {/* <ArticleList articles={this.props.articles}/> */}
