@@ -47,18 +47,16 @@ class App extends Component {
               <div>
                 <Header />
                 <h1 className="news-header">Top News</h1>
-                {/* <div className="top-news"> */}
-                  <div className='row'>
-                    <div className="col-md-8">
-                      <div className="top-news">
-                        <TopNews articles={this.state.articles}/>
-                      </div>
-                    </div>
-                    <div className="col-md-3">
-                      <SignupTab />
+                <div className='row'>
+                  <div className="col-md-8">
+                    <div className="top-news">
+                      <TopNews articles={this.state.articles}/>
                     </div>
                   </div>
-                {/* </div> */}
+                  <div className="col-md-3">
+                    <SignupTab />
+                  </div>
+                </div>
                 <Footer />
               </div>
             )

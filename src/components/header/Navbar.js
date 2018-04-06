@@ -69,13 +69,13 @@ class NavbarFeatures extends React.Component {
                           </Dropdown>
                       </NavItem>
                     </NavbarNav>
-                    {/* <NavbarNav right>
+                    <NavbarNav right>
                       <NavItem>
                         <form className="form-inline md-form mt-0">
                           <input className="form-control mr-sm-2 mb-0 text-white" type="text" placeholder="Search" aria-label="Search"/>
                         </form>
                       </NavItem>
-                    </NavbarNav> */}
+                    </NavbarNav>
                 </Collapse>
             </Navbar>
           </div>
