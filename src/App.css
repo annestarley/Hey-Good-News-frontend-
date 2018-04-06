@@ -139,8 +139,17 @@
   margin-top: 15%;
 }
 
-.signup-tab h3 {
+.signup-tab h3, .user-tone h3 {
   font-family: 'Fredericka the Great', cursive; /* not bad */
+}
+
+.user-tone {
+  background: black;
+  color: white;
+  padding: 5%;
+  margin: 5%;
+  border-radius: 2%;
+  text-align: center;
 }
 
 .YourHighlightClass {

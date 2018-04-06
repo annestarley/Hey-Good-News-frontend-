@@ -6,6 +6,7 @@ import IntroPage from './components/intro/IntroPage'
 import Header from './components/header/Header'
 import TopNews from './components/news/TopNews'
 import SignupTab from './components/signup/SignupTab'
+import UserTone from './components/userTone/UserTone'
 import AdditionalNews from './components/news/AdditionalNews'
 import Footer from './components/footer/Footer'
 
@@ -59,6 +60,7 @@ class App extends Component {
           </div>
           <div className="col-md-3">
             <SignupTab />
+            <UserTone />
           </div>
         </div>
         <Footer />
