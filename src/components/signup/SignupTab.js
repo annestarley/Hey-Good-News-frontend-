@@ -4,7 +4,8 @@ import SignupModal from './SignupModal'
 const SignupTab = () => {
   return (
     <div className='signup-tab'>
-      <p>Need some good news? Sign up to recieve a daily 'joyful' news article!</p>
+      <h3>Need some good news?</h3>
+      <p>Sign up to recieve a daily 'joyful' news article!</p>
       <SignupModal />
     </div>
   )

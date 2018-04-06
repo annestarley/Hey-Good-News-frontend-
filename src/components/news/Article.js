@@ -1,4 +1,5 @@
 import React from 'react'
+import Highlighter from 'react-highlight-words'
 import MoreTonesToggle from './MoreTonesToggle'
 
 const Article = (props) => {
@@ -48,8 +49,11 @@ const Article = (props) => {
     topSocialToneName = 'openness'
   }
 
+  let topEmotion = `${topEmotionalToneName} ${(topEmotionalTone * 100).toFixed(2)}%`
+  let topLanguage = `${topLanguageToneName} ${(topLanguageTone * 100).toFixed(2)}%`
+  let topSocial = `${topSocialToneName} ${(topSocialTone * 100).toFixed(2)}%`
 
-  var date = new Date().toUTCString().split(' ')
+  let date = new Date().toUTCString().split(' ')
   let currentTime = date[4].split(':')
 
   let propsTime = props.publishedAt.toString().split('T')
@@ -86,9 +90,30 @@ const Article = (props) => {
       <div className="tones">
         <p>
           <span className="top-tones">Top tones:</span>
-          <span className="top-tones">{topEmotionalToneName} {(topEmotionalTone * 100).toFixed(2)}% </span>
-          <span className="top-tones">{topLanguageToneName} {(topLanguageTone * 100).toFixed(2)}%</span>
-          <span className="top-tones">{topSocialToneName} {(topSocialTone * 100).toFixed(2)}%</span>
+          <span className="top-tones">
+            <Highlighter
+              highlightClassName="YourHighlightClass"
+              searchWords={[props.searchParameter]}
+              autoEscape={true}
+              textToHighlight={topEmotion}
+            />
+          </span>
+          <span className="top-tones">
+            <Highlighter
+              highlightClassName="YourHighlightClass"
+              searchWords={[props.searchParameter]}
+              autoEscape={true}
+              textToHighlight={topLanguage}
+            />
+          </span>
+          <span className="top-tones">
+            <Highlighter
+              highlightClassName="YourHighlightClass"
+              searchWords={[props.searchParameter]}
+              autoEscape={true}
+              textToHighlight={topSocial}
+            />
+          </span>
         </p>
         <div id="read-more-toggle">
           <MoreTonesToggle tone={props.tone}/>
