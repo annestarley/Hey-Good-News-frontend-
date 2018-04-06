@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ArticleList from './ArticleList'
+import SignupTab from '../signup/SignupTab'
 
 import TempArticleList from './TempArticleList'
+// import {Link} from 'react-router-dom'
 
 class TopNews extends React.Component {
 
@@ -9,8 +11,8 @@ class TopNews extends React.Component {
     return (
       <div>
         <h1 className="news-header">Top News</h1>
-        <div className="row">
-          <div className="col-md-8 col-sm-12 top-news">
+        {/* <div className="row"> */}
+          {/* <div className="col-md-8 col-sm-12 top-news"> */}
             {/* <ArticleList articles={this.props.articles}/> */}
             <TempArticleList />
             <TempArticleList />
@@ -22,19 +24,18 @@ class TopNews extends React.Component {
             <TempArticleList />
             <TempArticleList />
             <TempArticleList />
-          </div>
-          <div className="col-md-4 col-sm-12">
-            <div className="row">
-
+          {/* </div> */}
+          {/* <div className="col-md-4 col-sm-12"> */}
+            {/* <div className="row">
+              <SignupTab />
             </div>
             <div className="row">
 
             </div>
             <div className="row">
 
-            </div>
-          </div>
-        </div>
+            </div> */}
+          {/* </div> */}
       </div>
     )
   }

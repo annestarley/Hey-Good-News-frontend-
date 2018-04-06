@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
 
 
-class SignupModal extends React.Component {
+class ModalPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,4 +37,4 @@ class SignupModal extends React.Component {
   }
 }
 
-export default SignupModal;
+export default ModalPage;
