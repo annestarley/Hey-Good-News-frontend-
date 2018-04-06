@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-// import ArticleList from './ArticleList'
+import ArticleList from './ArticleList'
 import axios from 'axios'
 import TempArticleList from './TempArticleList'
 
-const backendURL = 'http://localhost:3000'
+const backendURL = 'http://localhost:8000'
 
 class AdditionalNews extends Component {
   constructor(props) {
@@ -33,12 +33,12 @@ class AdditionalNews extends Component {
   render () {
     return (
       <div className="top-news">
-        {/* <ArticleList articles={this.state.articles}/> */}
+        <ArticleList articles={this.state.articles}/>
+        {/* <TempArticleList />
         <TempArticleList />
         <TempArticleList />
         <TempArticleList />
-        <TempArticleList />
-        <TempArticleList />
+        <TempArticleList /> */}
       </div>
     )
   }

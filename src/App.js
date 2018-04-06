@@ -9,7 +9,7 @@ import SignupTab from './components/signup/SignupTab'
 import AdditionalNews from './components/news/AdditionalNews'
 import Footer from './components/footer/Footer'
 
-const backendURL = 'http://localhost:3000'
+const backendURL = 'http://localhost:8000'
 
 class App extends Component {
   constructor(props) {

@@ -35,10 +35,10 @@ const Article = (props) => {
     topSocialTone = props.tone.social.conscientiousness
     topSocialToneName = 'conscientiousness'
   }
-  if (parseFloat(props.tone.social.emotionalRange) > parseFloat(topSocialTone)) {
-    topSocialTone = props.tone.social.emotionalRange
-    topSocialToneName = 'emotional range'
-  }
+  // if (parseFloat(props.tone.social.emotionalRange) > parseFloat(topSocialTone)) {
+  //   topSocialTone = props.tone.social.emotionalRange
+  //   topSocialToneName = 'emotional range'
+  // }
   if (parseFloat(props.tone.social.extraversion) > parseFloat(topSocialTone)) {
     topSocialTone = props.tone.social.extraversion
     topSocialToneName = 'extraversion'
