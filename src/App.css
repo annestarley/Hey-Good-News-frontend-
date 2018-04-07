@@ -10,8 +10,8 @@
 }
 
 .App-header {
-  /* background-color: #222; */
-  background-color: #6464A3;
+  background-color: #222;
+  /* background-color: #6464A3; */
   height: 200px;
   padding: 20px;
   color: white;
@@ -61,8 +61,8 @@
 /* My CSS */
 .top-news {
   margin: 5%;
-  max-height: 800px;
-  overflow: auto;
+  /* max-height: 800px;
+  overflow: auto; */
 }
 
 .top-news h1 {
@@ -138,11 +138,11 @@
   margin-top: 15%;
 }
 
-.signup-tab h3, .user-tone h3 {
+.signup-tab h3, .user-tone h3, .user-article h3 {
   font-family: 'Fredericka the Great', cursive; /* not bad */
 }
 
-.user-tone {
+.user-tone, .user-article {
   background: black;
   color: white;
   padding: 5%;
@@ -155,6 +155,20 @@
   background-color: moccasin;
 }
 
+.user-story {
+  height: 200px;
+  width: 100%;
+}
+
+.input:focus {
+    height:300px;
+}
+.input{
+    width:100%;
+    height:100px;
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -163,5 +177,10 @@
 @media only screen and (max-width: 900px) {
   .subsubtitle {
     display: none;
+  }
+
+  .top-news {
+    max-height: 800px;
+    overflow: auto;
   }
 }
