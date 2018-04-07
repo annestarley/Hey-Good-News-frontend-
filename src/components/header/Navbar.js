@@ -62,9 +62,9 @@ class NavbarFeatures extends React.Component {
                           <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                           <DropdownToggle nav caret>Dropdown</DropdownToggle>
                           <DropdownMenu>
-                              <DropdownItem href="#">Action</DropdownItem>
-                              <DropdownItem href="#">Another Action</DropdownItem>
-                              <DropdownItem href="#">Something else here</DropdownItem>
+                              <DropdownItem href="#">Need some good news?</DropdownItem>
+                              <DropdownItem href="#">Find your tone!</DropdownItem>
+                              <DropdownItem href="#">Don't see your article?</DropdownItem>
                               <DropdownItem href="#">Something else here</DropdownItem>
                           </DropdownMenu>
                           </Dropdown>
