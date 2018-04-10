@@ -113,6 +113,7 @@ const Article = (props) => {
 
   if (hoursFinal === 0) hoursFinal = ''
   else if (hoursFinal === 1) hoursFinal = '1 hour'
+  else if (hoursFinal < 1) hoursFinal = `${hoursFinal + 24} hours`
   else hoursFinal = `${hoursFinal} hours`
   if (minutes === 0) minutes = ''
   else if (minutes === 1) minutes = '1 minute'

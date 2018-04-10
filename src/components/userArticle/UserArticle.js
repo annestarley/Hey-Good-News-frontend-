@@ -10,7 +10,7 @@ class UserArticle extends Component {
     super(props)
     this.state = {
       url: '',
-      article: []
+      article: {}
     }
   }
 
@@ -42,22 +42,14 @@ class UserArticle extends Component {
     }
   }
 
-  renderCollapse = () => {
-    if (this.state.article.length) {
-      return (
-        <UserArticleCollapse article={this.state.article} url={this.state.url}/>
-      )
-    }
-  }
-
   render () {
     return (
       <div className="user-article">
         <h3>Don't see the article you are interested in?</h3>
         <p>Enter the URL for your own article to see it's tone.</p>
         <Input type="text" placeholder="Your text..." onChange={this.getURL} onKeyPress={this.getTones}></Input>
-        {this.renderCollapse()}
-        <UserArticleCollapse />
+        {this.state.article.title  ? <UserArticleCollapse article={this.state.article}/> : <div></div>}
+
       </div>
     )
   }
