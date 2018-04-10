@@ -1,6 +1,5 @@
 import React from 'react'
 import NavbarFeatures from './Navbar'
-import { StickyContainer, Sticky } from 'react-sticky'
 
 const Header = (props) => {
   return (

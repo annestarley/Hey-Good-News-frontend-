@@ -16,6 +16,7 @@ const TempArticleList = (props) => {
           <span className="top-tones">Top tones:</span>
           <span className="top-tones">
             <Highlighter
+              className="joy"
               highlightClassName="YourHighlightClass"
               searchWords={[props.searchParameter]}
               autoEscape={true}

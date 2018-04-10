@@ -43,11 +43,9 @@ class App extends Component {
 
   setSearchParameter = (e) => {
     let searchParameter = e.target.value
-    console.log('searchParameter', searchParameter)
     this.setState({
       searchParameter: searchParameter
     })
-    console.log('state', this.state.searchParameter)
   }
 
   topNews = () => {
