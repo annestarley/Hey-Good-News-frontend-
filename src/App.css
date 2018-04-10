@@ -12,6 +12,7 @@
 .App-header {
   background-color: #222;
   /* background-color: #6464A3; */
+  background-color: #AF0000;
   height: 200px;
   padding: 20px;
   color: white;
@@ -125,6 +126,9 @@
 .news-header {
   text-align: center;
   margin-top: 5%;
+  margin-bottom: 5%;
+  padding-bottom: 2%;
+  border-bottom: grey 1px solid;
 }
 
 .signup-tab {
@@ -138,6 +142,24 @@
   font-size: 1.3em;
   padding: 5%;
   margin-top: 15%;
+}
+
+.source-img {
+  height: 50px;
+}
+
+.source-title {
+  color: #505050;
+}
+
+.source-title:hover {
+  color: #AF0000;
+}
+
+.sort {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
 }
 
 .signup-tab h3, .user-tone h3, .user-article h3 {

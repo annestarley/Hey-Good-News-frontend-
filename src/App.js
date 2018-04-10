@@ -55,10 +55,10 @@ class App extends Component {
         <div className="top-navbar">
           <NavbarFeatures setSearchParameter={this.setSearchParameter}/>
         </div>
-        <h1 className="news-header">Top News</h1>
         <div className='row'>
           <div className="col-md-8">
             <div className="top-news">
+              <h1 className="news-header">Top News</h1>
               <TopNews articles={this.state.articles} searchParameter={this.state.searchParameter} />
             </div>
           </div>

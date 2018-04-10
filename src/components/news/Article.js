@@ -126,7 +126,8 @@ const Article = (props) => {
 
   return (
     <div>
-      <a style={{display: "table-cell"}} href={props.url} target="_blank"><h4><strong>{props.title}</strong></h4></a>
+      {/* <img className="source-img" src={props.urlToImage}/> */}
+      <a className="source-title" style={{display: "table-cell"}} href={props.url} target="_blank"><h4><strong>{props.title}</strong></h4></a>
       <p className="source-time">{props.source} - Published {publishedTimeDifference}</p>
       <p className="description">{props.description}</p>
       <div className="tones">

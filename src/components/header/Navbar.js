@@ -30,7 +30,7 @@ class NavbarFeatures extends React.Component {
     render() {
         return (
           <div>
-            <Navbar color="black" dark expand="md" scrolling>
+            <Navbar color="danger-color-dark" dark expand="md" scrolling>
                 {/* <NavbarBrand to="/">
                     <img src={Logo} alt="Good News"></img>
                 </NavbarBrand> */}
