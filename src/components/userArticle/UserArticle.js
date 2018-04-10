@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Input} from 'mdbreact'
+import {Input, Spinner} from 'mdbreact'
 import axios from 'axios'
 import UserArticleCollapse from './UserArticleCollapse'
+// import LoadingAnimation from './LoadingAnimation'
 
 const backendURL = 'http://localhost:8000'
 
@@ -10,7 +11,8 @@ class UserArticle extends Component {
     super(props)
     this.state = {
       url: '',
-      article: {}
+      article: {},
+      loading: false
     }
   }
 
@@ -26,11 +28,15 @@ class UserArticle extends Component {
   getTones = (e) => {
     if (e.key === 'Enter') {
       console.log('enter')
+      this.setState({
+        loading: true
+      })
       axios.post(`${backendURL}/proxy`, {url: this.state.url})
         .then(res => {
           console.log(res);
           this.setState({
-            article: res.data
+            article: res.data,
+            loading: false
           })
         })
         .then(() => {
@@ -48,8 +54,8 @@ class UserArticle extends Component {
         <h3>Don't see the article you are interested in?</h3>
         <p>Enter the URL for your own article to see it's tone.</p>
         <Input type="text" placeholder="Your text..." onChange={this.getURL} onKeyPress={this.getTones}></Input>
-        {this.state.article.title  ? <UserArticleCollapse article={this.state.article}/> : <div></div>}
-
+        {this.state.article.title  ? <UserArticleCollapse article={this.state.article}/> : null}
+        {this.state.loading ? <img src="Loading3.gif"/> : null}
       </div>
     )
   }

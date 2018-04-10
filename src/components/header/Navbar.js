@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
+import { Navbar, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarBrand } from 'mdbreact';
 import { BrowserRouter as Router, NavLink as LinkReact, Link as ReactLink } from 'react-router-dom';
+import Logo from './newspaper.png'
 
 class NavbarFeatures extends React.Component {
     constructor(props) {
@@ -30,10 +31,9 @@ class NavbarFeatures extends React.Component {
         return (
           <div>
             <Navbar color="black" dark expand="md" scrolling>
-                {/* <NavbarBrand href="/">
-                    <strong>Navbar</strong>
+                {/* <NavbarBrand to="/">
+                    <img src={Logo} alt="Good News"></img>
                 </NavbarBrand> */}
-                {/* scrolling */}
                 { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>
                     <NavbarNav left>
