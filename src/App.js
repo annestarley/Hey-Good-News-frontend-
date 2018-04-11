@@ -31,7 +31,6 @@ class App extends Component {
   getTopArticles = () => {
     axios.get(`${backendURL}/top-articles`)
       .then(res => {
-        console.log(res.data)
         this.setState({
           articles: res.data
         })

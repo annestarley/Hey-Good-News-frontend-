@@ -4,7 +4,6 @@ import { Tooltip } from 'mdbreact';
 
 class TooltipsPage extends React.Component {
   render(props) {
-    // console.log('TOOL TIP', this.props.article.articles)
     let count = 0
     let anger = this.props.article.anger
     let disgust = this.props.article.disgust
@@ -18,8 +17,6 @@ class TooltipsPage extends React.Component {
         disgust = (disgust + article.disgust)/2
         fear = (fear + article.fear)/2
         joy = (joy + article.joy)/2
-
-        console.log('YES', count, article.source, anger, disgust, fear, joy)
       }
     })
 
