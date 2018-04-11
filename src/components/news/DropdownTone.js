@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
-  class DropdownPage extends React.Component {
+
+class DropdownPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,7 +27,7 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
     return (
       <div>
         <Dropdown isOpen = { this.state.dropdownOpen } toggle = { this.toggle } onChange={this.test}>
-          <DropdownToggle caret color="primary">
+          <DropdownToggle caret color="warning">
             {this.state.toneName}
           </DropdownToggle>
           <DropdownMenu>
@@ -35,14 +36,14 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
             <DropdownItem onClick={this.getTone}>Disgust</DropdownItem>
             <DropdownItem onClick={this.getTone}>Fear</DropdownItem>
             <DropdownItem divider/>
-            <DropdownItem>Analytical</DropdownItem>
-            <DropdownItem>Confident</DropdownItem>
-            <DropdownItem>Tentative</DropdownItem>
+            <DropdownItem onClick={this.getTone}>Analytical</DropdownItem>
+            <DropdownItem onClick={this.getTone}>Confident</DropdownItem>
+            <DropdownItem onClick={this.getTone}>Tentative</DropdownItem>
             <DropdownItem divider/>
-            <DropdownItem>Agreeableness</DropdownItem>
-            <DropdownItem>Conscientiousness</DropdownItem>
-            <DropdownItem>Extraversion</DropdownItem>
-            <DropdownItem>Openness</DropdownItem>
+            <DropdownItem onClick={this.getTone}>Agreeableness</DropdownItem>
+            <DropdownItem onClick={this.getTone}>Conscientiousness</DropdownItem>
+            <DropdownItem onClick={this.getTone}>Extraversion</DropdownItem>
+            <DropdownItem onClick={this.getTone}>Openness</DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </div>

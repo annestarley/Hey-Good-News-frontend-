@@ -35,14 +35,6 @@ class TopNews extends React.Component {
           <h4>Filter the news by tone?</h4>
           <p>Find all news articles with the chosen tone as a top tone.</p>
           <SelectPage setChosenTone={this.setChosenTone}/>
-
-          {/* <label>Default Select</label>
-          <select className="browser-default">
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-          </select> */}
         </div>
         <ArticleList
           articles={this.props.articles}
