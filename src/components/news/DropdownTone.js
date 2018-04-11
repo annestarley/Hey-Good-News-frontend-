@@ -16,17 +16,25 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
   }
   render() {
     return (
+      <div>
         <Dropdown isOpen = { this.state.dropdownOpen } toggle = { this.toggle }>
           <DropdownToggle caret color="primary">
             Choose A Tone
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem href="#">Action</DropdownItem>
-            <DropdownItem href="#">Another Action</DropdownItem>
-            <DropdownItem href="#">Something else here</DropdownItem>
+            <DropdownItem href="#">Joy</DropdownItem>
+            <DropdownItem href="#">Anger</DropdownItem>
+            <DropdownItem href="#">Disgust</DropdownItem>
+            <DropdownItem href="#">Fear</DropdownItem>
+            <DropdownItem divider/>
+            <DropdownItem href="#">Analytical</DropdownItem>
+            <DropdownItem href="#">Confident</DropdownItem>
+            <DropdownItem href="#">Tentative</DropdownItem>
+            <DropdownItem divider/>
             <DropdownItem href="#">Something else here</DropdownItem>
           </DropdownMenu>
         </Dropdown>
+      </div>
     );
   }
 }

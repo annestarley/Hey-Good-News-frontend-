@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarBrand } from 'mdbreact';
 import { BrowserRouter as Router, NavLink as LinkReact, Link as ReactLink } from 'react-router-dom';
-import Logo from './newspaper.png'
+// import Logo from './newspaper.png'
 
 class NavbarFeatures extends React.Component {
     constructor(props) {
@@ -30,11 +30,11 @@ class NavbarFeatures extends React.Component {
     render() {
         return (
           <div>
-            <Navbar color="danger-color-dark" dark expand="md" scrolling>
-                {/* <NavbarBrand to="/">
-                    <img src={Logo} alt="Good News"></img>
+            <Navbar color="black" dark expand="md" scrolling> */}
+                {/* <NavbarBrand href="/">
+                    <strong>Navbar</strong>
                 </NavbarBrand> */}
-                { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
+                {/* { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>
                     <NavbarNav left>
                       <NavItem active>
@@ -77,7 +77,7 @@ class NavbarFeatures extends React.Component {
                         </form>
                       </NavItem>
                     </NavbarNav>
-                </Collapse>
+                </Collapse> */}
             </Navbar>
           </div>
         );
