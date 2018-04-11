@@ -227,6 +227,17 @@
   margin-left: 5%;
 }
 
+.top-user-tones {
+  border: white solid 1px;
+  padding: 5%;
+  margin: 2%;
+  font-size: 1.1em;
+}
+
+.user-article-tones {
+  padding: 5%;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
