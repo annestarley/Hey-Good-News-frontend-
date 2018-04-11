@@ -4,7 +4,6 @@ import MoreTonesToggle from './MoreTonesToggle'
 import TooltipsPage from './ToolTips'
 
 const Article = (props) => {
-
   // let topEmotionalTone = props.tone.emotion.anger
   // let topEmotionalToneName = 'anger'
   // if (parseFloat(props.tone.emotion.disgust) > parseFloat(topEmotionalTone)) {

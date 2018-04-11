@@ -4,13 +4,44 @@ import { Tooltip } from 'mdbreact';
 
 class TooltipsPage extends React.Component {
   render(props) {
-    console.log('TOOL TIP', this.props.article.source)
+    // console.log('TOOL TIP', this.props.article.articles)
+    let count = 0
+    let anger = this.props.article.anger
+    let disgust = this.props.article.disgust
+    let fear = this.props.article.fear
+    let joy = this.props.article.joy
 
-    let toolTipContent = `Overall top tones for all ${this.props.article.source} articles: Fear 34% - Total articles posted: 1`
+    this.props.article.articles.forEach(article => {
+      if (this.props.article.source === article.source) {
+        count++
+        anger = (anger + article.anger)/2
+        disgust = (disgust + article.disgust)/2
+        fear = (fear + article.fear)/2
+        joy = (joy + article.joy)/2
+
+        console.log('YES', count, article.source, anger, disgust, fear, joy)
+      }
+    })
+
+    let overallTopEmotionalTone = anger
+    let overAllTopEmotionalToneName = 'Anger'
+    if (disgust > overallTopEmotionalTone) {
+      overallTopEmotionalTone = disgust
+      overAllTopEmotionalToneName = 'Disgust'
+    }
+    if (fear > overallTopEmotionalTone) {
+      overallTopEmotionalTone = fear
+      overAllTopEmotionalToneName = 'Fear'
+    }
+    if (joy > overallTopEmotionalTone) {
+      overallTopEmotionalTone = joy
+      overAllTopEmotionalToneName = 'Joy'
+    }
+
+    let toolTipContent = `Overall top emotional tone for all ${this.props.article.source} articles: ${overAllTopEmotionalToneName} ${(overallTopEmotionalTone * 100).toFixed(2)}% - Total articles posted: ${count}`
     return (
       <div style={{display: "inline-block"}}>
         <Tooltip
-          // className="tooltip"
           placement="top"
           componentClass="p"
           tag="div"
