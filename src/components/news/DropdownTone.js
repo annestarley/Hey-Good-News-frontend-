@@ -31,7 +31,10 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
             <DropdownItem href="#">Confident</DropdownItem>
             <DropdownItem href="#">Tentative</DropdownItem>
             <DropdownItem divider/>
-            <DropdownItem href="#">Something else here</DropdownItem>
+            <DropdownItem href="#">Agreeableness</DropdownItem>
+            <DropdownItem href="#">Conscientiousness</DropdownItem>
+            <DropdownItem href="#">Extraversion</DropdownItem>
+            <DropdownItem href="#">Openness</DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </div>
