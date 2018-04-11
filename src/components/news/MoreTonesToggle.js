@@ -16,7 +16,7 @@ class MoreTonesToggle extends Component {
   }
 
   render() {
-    console.log('THIS PROPS', this.props)
+    // console.log('THIS PROPS', this.props)
     return (
       <div>
         <div>

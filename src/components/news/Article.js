@@ -1,6 +1,7 @@
 import React from 'react'
 import Highlighter from 'react-highlight-words'
 import MoreTonesToggle from './MoreTonesToggle'
+import TooltipsPage from './ToolTips'
 
 const Article = (props) => {
 
@@ -128,7 +129,9 @@ const Article = (props) => {
     <div>
       {/* <img className="source-img" src={props.urlToImage}/> */}
       <a className="source-title" style={{display: "table-cell"}} href={props.url} target="_blank"><h4><strong>{props.title}</strong></h4></a>
-      <p className="source-time">{props.source} - Published {publishedTimeDifference}</p>
+      <div className="source-time">
+        <TooltipsPage article={props}/> - Published {publishedTimeDifference}
+      </div>
       <p className="description">{props.description}</p>
       <div className="tones">
         <p>

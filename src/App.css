@@ -21,7 +21,7 @@
 .top-navbar {
   position: sticky;
   top: 0px;
-  z-index: 1020;
+  z-index: 7;
 }
 
 .App-title {
@@ -77,7 +77,7 @@
 }
 
 .description {
-  margin-top: -10px;
+  margin-top: 5px;
 }
 
 .tones p {
@@ -160,7 +160,9 @@
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 5%;
+  margin-bottom: 5%;
   text-align: center;
+  border-bottom: 1px solid grey;
 }
 
 .signup-tab h3, .user-tone h3, .user-article h3 {
