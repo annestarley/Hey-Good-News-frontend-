@@ -12,7 +12,8 @@ class UserTone extends Component {
     super(props)
     this.state = {
       userInput: '',
-      loading: true,
+      userTone: {},
+      loading: false
     }
   }
 
@@ -20,29 +21,29 @@ class UserTone extends Component {
     let userInput = e.target.value
     console.log(userInput)
     this.setState({
-      userInput: userInput
+      userInput: userInput,
     })
   }
 
   getTones = () => {
     console.log('click')
-      // this.setState({
-      //   loading: true
-      // })
-      axios.post(`${backendURL}/users`, {userInput: this.state.userInput})
-        .then(res => {
-          console.log(res);
-          // this.setState({
-          //   article: res.data,
-          //   loading: false
-          // })
+    this.setState({
+      loading: true
+    })
+    axios.post(`${backendURL}/users`, {userInput: this.state.userInput})
+      .then(res => {
+        console.log('RESPONSE', res);
+        this.setState({
+          userTone: res.data,
+          loading: false
         })
-        // .then(() => {
-        //   this.renderCollapse()
-        // })
-        .catch(err => {
-          console.log(err);
-        })
+      })
+      .then(() => {
+        this.renderCollapse()
+      })
+      .catch(err => {
+        console.log(err);
+      })
 
   }
 
@@ -61,9 +62,9 @@ class UserTone extends Component {
           cols="10"
           onChange={this.getUserInput}
         >Your text here...</textarea>
-        <Button color="primary" onClick={this.getTones}>Okay, get tones!</Button>
-        {/* <UserInfoCollapse /> */}
-        {/* <UserToneCollapse /> */}
+        {!this.state.userTone.anger ? <Button color="primary" onClick={this.getTones}>Okay, get tones!</Button> : null}
+        {this.state.userTone.anger ? <UserToneCollapse userTone={this.state.userTone}/> : null}
+        {this.state.loading ? <img src="Loading3.gif"/> : null}
       </div>
     )
   }

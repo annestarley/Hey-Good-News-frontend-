@@ -1,77 +1,106 @@
 import React, { Component } from 'react';
-import { Button, CollapsePage, Card, CardBody, Collapse } from 'mdbreact';
+import { Button, Collapse } from 'mdbreact';
 
 class UserToneCollapse extends Component {
   constructor(props) {
     super(props);
-    this.onClick1 = this.onClick1.bind(this);
-    this.onClick2 = this.onClick2.bind(this);
+    this.toggle = this.toggle.bind(this);
 
     this.state = {
-      accordion: false
+      collapse: false,
     };
   }
-  onClick1() {
-    let state = '';
 
-    if(this.state.accordion !== 1) {
-      state = 1;
-    } else {
-      state = false;
-    }
-
-    this.setState({
-      accordion: state});
+  toggle(e) {
+    e.preventDefault()
+    this.setState({ collapse: !this.state.collapse });
   }
-
-  onClick2() {
-    let state = '';
-
-    if(this.state.accordion !== 2) {
-      state = 2;
-    } else {
-      state = false;
-    }
-
-    this.setState({
-      accordion: state});
-  }
-
 
   render() {
+
+    let topEmotionalTone = this.props.userTone.anger
+    let topEmotionalToneName = 'anger'
+    if (parseFloat(this.props.userTone.disgust) > parseFloat(topEmotionalTone)) {
+      topEmotionalTone = this.props.userTone.disgust
+      topEmotionalToneName = 'disgust'
+    }
+    if (parseFloat(this.props.userTone.fear) > parseFloat(topEmotionalTone)) {
+      topEmotionalTone = this.props.userTone.fear
+      topEmotionalToneName = 'fear'
+    }
+    if (parseFloat(this.props.userTone.joy) > parseFloat(topEmotionalTone)) {
+      topEmotionalTone = this.props.userTone.joy
+      topEmotionalToneName = 'joy'
+    }
+
+    let topLanguageTone = this.props.userTone.analytical
+    let topLanguageToneName = 'analytical'
+    if (parseFloat(this.props.userTone.confident) > parseFloat(topLanguageTone)) {
+      topLanguageTone = this.props.userTone.confident
+      topLanguageToneName = 'confident'
+    }
+    if (parseFloat(this.props.userTone.tentative) > parseFloat(topLanguageTone)) {
+      topLanguageTone = this.props.userTone.tentative
+      topLanguageToneName = 'tentative'
+    }
+
+    let topSocialTone = this.props.userTone.agreeableness
+    let topSocialToneName = 'agreeableness'
+    if (parseFloat(this.props.userTone.conscientiousness) > parseFloat(topSocialTone)) {
+      topSocialTone = this.props.userTone.conscientiousness
+      topSocialToneName = 'conscientiousness'
+    }
+    if (parseFloat(this.props.userTone.extraversion) > parseFloat(topSocialTone)) {
+      topSocialTone = this.props.userTone.extraversion
+      topSocialToneName = 'extraversion'
+    }
+    if (parseFloat(this.props.userTone.openness) > parseFloat(topSocialTone)) {
+      topSocialTone = this.props.userTone.openness
+      topSocialToneName = 'openness'
+    }
+
+    console.log(topEmotionalTone)
+    console.log(topEmotionalToneName);
+    console.log(typeof topEmotionalTone)
+
     return (
       <div>
-        <Card>
-          <div className="card-header" onClick={this.onClick1}><a href="#"><h5>Collapsible Group Item #1</h5></a></div>
-          <Collapse isOpen={this.state.accordion === 1}>
-            <CardBody>
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-              non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-              moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-              et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-              synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </CardBody>
+        <div>
+          <Button color="primary"  onClick={this.toggle} style={{ marginBottom: "1rem" }}>See Results</Button>
+          <Collapse isOpen={this.state.collapse}>
+            <div className="user-article-results">
+              <h5>Results For "{this.props.userTone.title}"</h5>
+              <div className="top-user-tones">
+                <p><strong>Top Tones:</strong></p>
+                <p className="user-article-tone"><strong>{topEmotionalToneName} {(topEmotionalTone * 100).toFixed(2)}%</strong></p>
+                <p className="user-article-tone"><strong>{topLanguageToneName} {(topLanguageTone * 100).toFixed(2)}%</strong></p>
+                <p className="user-article-tone"><strong>{topSocialToneName} {(topSocialTone * 100).toFixed(2)}%</strong></p>
+              </div>
+              <div className="user-article-tones">
+                <p><strong>Emotional Tones:</strong></p>
+                <p className="user-article-tone">anger: {(this.props.userTone.anger * 100).toFixed(2)}%</p>
+                <p className="user-article-tone">disgust: {(this.props.userTone.disgust * 100).toFixed(2)}%</p>
+                <p className="user-article-tone">fear: {(this.props.userTone.fear * 100).toFixed(2)}%</p>
+                <p className="user-article-tone">joy: {(this.props.userTone.joy * 100).toFixed(2)}%</p>
+              </div>
+              <div className="user-article-tones">
+                <p><strong>Language Tones:</strong></p>
+                <p className="user-article-tone">analytical: {(this.props.userTone.analytical * 100).toFixed(2)}%</p>
+                <p className="user-article-tone">confident: {(this.props.userTone.confident * 100).toFixed(2)}%</p>
+                <p className="user-article-tone">tentative: {(this.props.userTone.tentative * 100).toFixed(2)}%</p>
+              </div>
+              <div className="user-article-tones">
+                <p><strong>Social Tones:</strong></p>
+                <p className="user-article-tone">agreeableness: {(this.props.userTone.agreeableness * 100).toFixed(2)}%</p>
+                <p className="user-article-tone">conscientiousness: {(this.props.userTone.conscientiousness * 100).toFixed(2)}%</p>
+                <p className="user-article-tone">extraversion: {(this.props.userTone.extraversion * 100).toFixed(2)}%</p>
+                <p className="user-article-tone">openness: {(this.props.userTone.openness * 100).toFixed(2)}%</p>
+              </div>
+            </div>
           </Collapse>
-        </Card>
-
-        <Card>
-          <div className="card-header" onClick={this.onClick2}><a href="#"><h5>Collapsible Group Item #2</h5></a></div>
-            <Collapse isOpen={this.state.accordion === 2}>
-              <CardBody>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-              </CardBody>
-            </Collapse>
-        </Card>
-
+        </div>
       </div>
     );
   }
 }
-
-export default UserToneCollapse
+export default UserToneCollapse;
