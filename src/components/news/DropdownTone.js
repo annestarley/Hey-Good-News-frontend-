@@ -42,7 +42,7 @@ class DropdownPage extends React.Component {
             <DropdownItem onClick={this.getTone}>Anger</DropdownItem>
             <DropdownItem onClick={this.getTone}>Disgust</DropdownItem>
             <DropdownItem onClick={this.getTone}>Fear</DropdownItem>
-            <DropdownItem divider/>
+            {/* <DropdownItem divider/>
             <DropdownItem onClick={this.getTone}>Analytical</DropdownItem>
             <DropdownItem onClick={this.getTone}>Confident</DropdownItem>
             <DropdownItem onClick={this.getTone}>Tentative</DropdownItem>
@@ -50,7 +50,7 @@ class DropdownPage extends React.Component {
             <DropdownItem onClick={this.getTone}>Agreeableness</DropdownItem>
             <DropdownItem onClick={this.getTone}>Conscientiousness</DropdownItem>
             <DropdownItem onClick={this.getTone}>Extraversion</DropdownItem>
-            <DropdownItem onClick={this.getTone}>Openness</DropdownItem>
+            <DropdownItem onClick={this.getTone}>Openness</DropdownItem> */}
             <DropdownItem divider/>
             <DropdownItem onClick={this.reset}>Reset to all tones</DropdownItem>
           </DropdownMenu>
