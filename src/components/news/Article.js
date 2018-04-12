@@ -94,6 +94,16 @@ const Article = (props) => {
   let topLanguage = `${topLanguageToneName} ${(topLanguageTone * 100).toFixed(2)}%`
   let topSocial = `${topSocialToneName} ${(topSocialTone * 100).toFixed(2)}%`
 
+
+  let displayed = ''
+  if (props.chosenTone.length) {
+    if (topEmotionalToneName !== props.chosenTone) {
+      console.log('Nope, no match', props.title)
+      displayed = 'no-display'
+    }
+    // console.log('YES, there is length');
+  }
+
   let date = new Date().toUTCString().split(' ')
   let currentTime = date[4].split(':')
 
@@ -125,7 +135,7 @@ const Article = (props) => {
   let publishedTimeDifference = `${hoursFinal} ${minutes} ${seconds} ago`
 
   return (
-    <div>
+    <div className={displayed}>
       {/* <img className="source-img" src={props.urlToImage}/> */}
       <a className="source-title" style={{display: "table-cell"}} href={props.url} target="_blank"><h4><strong>{props.title}</strong></h4></a>
       <div className="source-time">

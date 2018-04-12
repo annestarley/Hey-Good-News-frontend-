@@ -19,16 +19,7 @@ class TopNews extends React.Component {
     })
   }
 
-  setAngerTone = (e) => {
-    let chosenTone = 'anger'
-    console.log(chosenTone)
-    this.setState({
-      chosenTone: chosenTone
-    })
-  }
-
   render () {
-    console.log(this.state)
     return (
       <div>
         <div className="sort">
@@ -39,8 +30,7 @@ class TopNews extends React.Component {
         <ArticleList
           articles={this.props.articles}
           searchParameter={this.props.searchParameter}
-          setChosenTone={this.props.setChosenTone}
-          setAngerTone={this.props.setAngerTone}
+          chosenTone={this.state.chosenTone}
         />
         {/* <TempArticleList searchParameter={props.searchParameter} />
         <TempArticleList searchParameter={props.searchParameter} />
