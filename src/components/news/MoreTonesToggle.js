@@ -8,19 +8,25 @@ class MoreTonesToggle extends Component {
 
     this.state = {
       collapse: false,
+      linkText: 'See more...'
     };
   }
 
   toggle(e) {
     e.preventDefault()
     this.setState({ collapse: !this.state.collapse });
+    if (this.state.linkText === 'See more...') {
+      this.setState({ linkText: 'See less...'})
+    } else {
+      this.setState({ linkText: 'See more...'})
+    }
   }
 
   render() {
     return (
       <div>
         <div>
-          <a href="#" onClick={this.toggle}>See more...</a>
+          <a href="#" onClick={this.toggle}>{this.state.linkText}</a>
           <Collapse isOpen={this.state.collapse}>
             <div>
               <p id="other-tones"><strong>Emotional:</strong> anger {(this.props.article.anger * 100).toFixed(2)}%, disgust {(this.props.article.disgust * 100).toFixed(2)}%, fear {(this.props.article.fear * 100).toFixed(2)}%, joy {(this.props.article.joy * 100).toFixed(2)}%</p>
