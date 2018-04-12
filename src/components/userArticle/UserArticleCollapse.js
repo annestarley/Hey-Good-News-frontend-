@@ -11,7 +11,8 @@ class UserArticleCollapse extends Component {
     };
   }
 
-  toggle() {
+  toggle(e) {
+    e.preventDefault()
     this.setState({ collapse: !this.state.collapse });
   }
 
