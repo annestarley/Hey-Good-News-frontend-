@@ -59,10 +59,6 @@ class UserArticleCollapse extends Component {
       topSocialToneName = 'openness'
     }
 
-    console.log(topEmotionalTone)
-    console.log(topEmotionalToneName);
-    console.log(typeof topEmotionalTone)
-
     return (
       <div>
         <div>

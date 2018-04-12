@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {Input, Button} from 'mdbreact'
 import UserToneCollapse from './UserToneCollapse'
-import TwitterCollapse from './TwitterCollapse'
-import UserInfoCollapse from './UserInfoCollapse'
 import axios from 'axios'
 
 const backendURL = 'http://localhost:8000'
@@ -19,20 +17,17 @@ class UserTone extends Component {
 
   getUserInput = (e) => {
     let userInput = e.target.value
-    console.log(userInput)
     this.setState({
       userInput: userInput,
     })
   }
 
   getTones = () => {
-    console.log('click')
     this.setState({
       loading: true
     })
     axios.post(`${backendURL}/users`, {userInput: this.state.userInput})
       .then(res => {
-        console.log('RESPONSE', res);
         this.setState({
           userTone: res.data,
           loading: false

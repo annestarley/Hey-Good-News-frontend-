@@ -25,13 +25,11 @@ class UserArticle extends Component {
 
   getTones = (e) => {
     if (e.key === 'Enter') {
-      console.log('enter')
       this.setState({
         loading: true
       })
       axios.post(`${backendURL}/proxy`, {url: this.state.url})
         .then(res => {
-          console.log(res);
           this.setState({
             article: res.data,
             loading: false
