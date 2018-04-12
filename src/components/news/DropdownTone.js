@@ -23,6 +23,13 @@ class DropdownPage extends React.Component {
     this.props.setChosenTone(e.target.innerText.toLowerCase())
   }
 
+  reset = () => {
+    this.setState({
+      toneName: 'Choose A Tone'
+    })
+    this.props.resetChosenTone()
+  }
+
   render() {
     return (
       <div>
@@ -44,6 +51,8 @@ class DropdownPage extends React.Component {
             <DropdownItem onClick={this.getTone}>Conscientiousness</DropdownItem>
             <DropdownItem onClick={this.getTone}>Extraversion</DropdownItem>
             <DropdownItem onClick={this.getTone}>Openness</DropdownItem>
+            <DropdownItem divider/>
+            <DropdownItem onClick={this.reset}>Reset to all tones</DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </div>

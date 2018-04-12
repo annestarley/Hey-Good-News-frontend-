@@ -97,11 +97,12 @@ const Article = (props) => {
 
   let displayed = ''
   if (props.chosenTone.length) {
-    if (topEmotionalToneName !== props.chosenTone) {
+    if ((topEmotionalToneName || topLanguageToneName || topSocialToneName) !== props.chosenTone) {
       console.log('Nope, no match', props.title)
       displayed = 'no-display'
     }
-    // console.log('YES, there is length');
+  } else {
+    displayed = ''
   }
 
   let date = new Date().toUTCString().split(' ')
