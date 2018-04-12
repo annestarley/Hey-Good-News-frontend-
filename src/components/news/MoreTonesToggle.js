@@ -11,12 +11,12 @@ class MoreTonesToggle extends Component {
     };
   }
 
-  toggle() {
+  toggle(e) {
+    e.preventDefault()
     this.setState({ collapse: !this.state.collapse });
   }
 
   render() {
-    // console.log('THIS PROPS', this.props)
     return (
       <div>
         <div>

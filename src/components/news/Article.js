@@ -98,7 +98,6 @@ const Article = (props) => {
   let displayed = ''
   if (props.chosenTone.length) {
     if ((topEmotionalToneName || topLanguageToneName || topSocialToneName) !== props.chosenTone) {
-      console.log('Nope, no match', props.title)
       displayed = 'no-display'
     }
   } else {
