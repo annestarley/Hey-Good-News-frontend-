@@ -63,8 +63,8 @@ class App extends Component {
           </div>
           <div className="col-md-3">
             <SignupTab />
-            <UserTone />
             <UserArticle />
+            <UserTone />
           </div>
         </div>
         <Footer />

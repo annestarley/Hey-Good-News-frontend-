@@ -30,8 +30,8 @@ class TopNews extends React.Component {
       <div>
         {console.log(this.state)}
         <div className="sort">
-          <h4>Filter the news by tone?</h4>
-          <p>Find all news articles with the chosen tone as a top tone.</p>
+          <h4>Filter the news by emotional tone?</h4>
+          <p>Find all news articles with the chosen emotional tone as a top tone.</p>
           <SelectPage
             setChosenTone={this.setChosenTone}
             resetChosenTone={this.resetChosenTone}

@@ -18,11 +18,9 @@ class UserArticle extends Component {
 
   getURL = (e) => {
     let url = e.target.value
-    console.log(url)
     this.setState({
       url: url
     })
-    console.log(this.state)
   }
 
   getTones = (e) => {
@@ -53,7 +51,12 @@ class UserArticle extends Component {
       <div className="user-article">
         <h3>Don't see the article you are interested in?</h3>
         <p>Enter the URL for your own article to see it's tone.</p>
-        <Input type="text" placeholder="Your text..." onChange={this.getURL} onKeyPress={this.getTones}></Input>
+        <Input
+          type="text"
+          placeholder="Your text..."
+          onChange={this.getURL}
+          onKeyPress={this.getTones}
+        ></Input>
         {this.state.article.title  ? <UserArticleCollapse article={this.state.article}/> : null}
         {this.state.loading ? <img src="Loading3.gif"/> : null}
       </div>
