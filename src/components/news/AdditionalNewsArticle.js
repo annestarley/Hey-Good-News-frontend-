@@ -3,94 +3,92 @@ import Highlighter from 'react-highlight-words'
 import MoreTonesToggle from './MoreTonesToggle'
 import TooltipsPage from './ToolTips'
 
-const Article = (props) => {
-  // let topEmotionalTone = props.tone.emotion.anger
+const AdditionalNewsArticle = (props) => {
+  let topEmotionalTone = props.tone.emotion.anger
+  let topEmotionalToneName = 'anger'
+  if (parseFloat(props.tone.emotion.disgust) > parseFloat(topEmotionalTone)) {
+    topEmotionalTone = props.tone.emotion.disgust
+    topEmotionalToneName = 'disgust'
+  }
+  if (parseFloat(props.tone.emotion.fear) > parseFloat(topEmotionalTone)) {
+    topEmotionalTone = props.tone.emotion.fear
+    topEmotionalToneName = 'fear'
+  }
+  if (parseFloat(props.tone.emotion.joy) > parseFloat(topEmotionalTone)) {
+    topEmotionalTone = props.tone.emotion.joy
+    topEmotionalToneName = 'joy'
+  }
+
+  // let topEmotionalTone = props.anger
   // let topEmotionalToneName = 'anger'
-  // if (parseFloat(props.tone.emotion.disgust) > parseFloat(topEmotionalTone)) {
-  //   topEmotionalTone = props.tone.emotion.disgust
+  // if (parseFloat(props.disgust) > parseFloat(topEmotionalTone)) {
+  //   topEmotionalTone = props.disgust
   //   topEmotionalToneName = 'disgust'
   // }
-  // if (parseFloat(props.tone.emotion.fear) > parseFloat(topEmotionalTone)) {
-  //   topEmotionalTone = props.tone.emotion.fear
+  // if (parseFloat(props.fear) > parseFloat(topEmotionalTone)) {
+  //   topEmotionalTone = props.fear
   //   topEmotionalToneName = 'fear'
   // }
-  // if (parseFloat(props.tone.emotion.joy) > parseFloat(topEmotionalTone)) {
-  //   topEmotionalTone = props.tone.emotion.joy
+  // if (parseFloat(props.joy) > parseFloat(topEmotionalTone)) {
+  //   topEmotionalTone = props.joy
   //   topEmotionalToneName = 'joy'
   // }
 
-  let joy = (props.joy * .5)
+  let topLanguageTone = props.tone.language.analytical
+  let topLanguageToneName = 'analytical'
+  if (parseFloat(props.tone.language.confident) > parseFloat(topLanguageTone)) {
+    topLanguageTone = props.tone.language.confident
+    topLanguageToneName = 'confident'
+  }
+  if (parseFloat(props.tone.language.tentative) > parseFloat(topLanguageTone)) {
+    topLanguageTone = props.tone.language.tentative
+    topLanguageToneName = 'tentative'
+  }
 
-  let topEmotionalTone = props.anger
-  let topEmotionalToneName = 'anger'
-  if (parseFloat(props.disgust) > parseFloat(topEmotionalTone)) {
-    topEmotionalTone = props.disgust
-    topEmotionalToneName = 'disgust'
-  }
-  if (parseFloat(props.fear) > parseFloat(topEmotionalTone)) {
-    topEmotionalTone = props.fear
-    topEmotionalToneName = 'fear'
-  }
-  if (joy > parseFloat(topEmotionalTone)) {
-    topEmotionalTone = joy
-    topEmotionalToneName = 'joy'
-  }
-  //
-  // let topLanguageTone = props.tone.language.analytical
+  // let topLanguageTone = props.analytical
   // let topLanguageToneName = 'analytical'
-  // if (parseFloat(props.tone.language.confident) > parseFloat(topLanguageTone)) {
-  //   topLanguageTone = props.tone.language.confident
+  // if (parseFloat(props.confident) > parseFloat(topLanguageTone)) {
+  //   topLanguageTone = props.confident
   //   topLanguageToneName = 'confident'
   // }
-  // if (parseFloat(props.tone.language.tentative) > parseFloat(topLanguageTone)) {
-  //   topLanguageTone = props.tone.language.tentative
+  // if (parseFloat(props.tentative) > parseFloat(topLanguageTone)) {
+  //   topLanguageTone = props.tentative
   //   topLanguageToneName = 'tentative'
   // }
 
-  let topLanguageTone = props.analytical
-  let topLanguageToneName = 'analytical'
-  if (parseFloat(props.confident) > parseFloat(topLanguageTone)) {
-    topLanguageTone = props.confident
-    topLanguageToneName = 'confident'
-  }
-  if (parseFloat(props.tentative) > parseFloat(topLanguageTone)) {
-    topLanguageTone = props.tentative
-    topLanguageToneName = 'tentative'
-  }
-  //
-  // let topSocialTone = props.tone.social.agreeableness
-  // let topSocialToneName = 'agreeableness'
-  // if (parseFloat(props.tone.social.conscientiousness) > parseFloat(topSocialTone)) {
-  //   topSocialTone = props.tone.social.conscientiousness
-  //   topSocialToneName = 'conscientiousness'
-  // }
-  // // if (parseFloat(props.tone.social.emotionalRange) > parseFloat(topSocialTone)) {
-  // //   topSocialTone = props.tone.social.emotionalRange
-  // //   topSocialToneName = 'emotional range'
-  // // }
-  // if (parseFloat(props.tone.social.extraversion) > parseFloat(topSocialTone)) {
-  //   topSocialTone = props.tone.social.extraversion
-  //   topSocialToneName = 'extraversion'
-  // }
-  // if (parseFloat(props.tone.social.openness) > parseFloat(topSocialTone)) {
-  //   topSocialTone = props.tone.social.openness
-  //   topSocialToneName = 'openness'
-  // }
-
-  let topSocialTone = props.agreeableness
+  let topSocialTone = props.tone.social.agreeableness
   let topSocialToneName = 'agreeableness'
-  if (parseFloat(props.conscientiousness) > parseFloat(topSocialTone)) {
-    topSocialTone = props.conscientiousness
+  if (parseFloat(props.tone.social.conscientiousness) > parseFloat(topSocialTone)) {
+    topSocialTone = props.tone.social.conscientiousness
     topSocialToneName = 'conscientiousness'
   }
-  if (parseFloat(props.extraversion) > parseFloat(topSocialTone)) {
-    topSocialTone = props.extraversion
+  // if (parseFloat(props.tone.social.emotionalRange) > parseFloat(topSocialTone)) {
+  //   topSocialTone = props.tone.social.emotionalRange
+  //   topSocialToneName = 'emotional range'
+  // }
+  if (parseFloat(props.tone.social.extraversion) > parseFloat(topSocialTone)) {
+    topSocialTone = props.tone.social.extraversion
     topSocialToneName = 'extraversion'
   }
-  if (parseFloat(props.openness) > parseFloat(topSocialTone)) {
-    topSocialTone = props.openness
+  if (parseFloat(props.tone.social.openness) > parseFloat(topSocialTone)) {
+    topSocialTone = props.tone.social.openness
     topSocialToneName = 'openness'
   }
+
+  // let topSocialTone = props.agreeableness
+  // let topSocialToneName = 'agreeableness'
+  // if (parseFloat(props.conscientiousness) > parseFloat(topSocialTone)) {
+  //   topSocialTone = props.conscientiousness
+  //   topSocialToneName = 'conscientiousness'
+  // }
+  // if (parseFloat(props.extraversion) > parseFloat(topSocialTone)) {
+  //   topSocialTone = props.extraversion
+  //   topSocialToneName = 'extraversion'
+  // }
+  // if (parseFloat(props.openness) > parseFloat(topSocialTone)) {
+  //   topSocialTone = props.openness
+  //   topSocialToneName = 'openness'
+  // }
 
   let topEmotion = `${topEmotionalToneName} ${(topEmotionalTone * 100).toFixed(2)}%`
   let topLanguage = `${topLanguageToneName} ${(topLanguageTone * 100).toFixed(2)}%`
@@ -192,4 +190,4 @@ const Article = (props) => {
   )
 }
 
-export default Article
+export default AdditionalNewsArticle

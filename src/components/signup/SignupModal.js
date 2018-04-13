@@ -36,12 +36,12 @@ class SignupModal extends React.Component {
           <ModalHeader toggle={this.toggle}>Daily Good News Sign Up</ModalHeader>
           <ModalBody>
             <p>Enter your first name and email address and we will send you a daily article where joy is the top tone.</p>
-            <Input label="Example label" icon="user" />
-            <Input label="Example label" icon="envelope" />
+            <Input label="Example label" icon="user" className="signup-icon"/>
+            <Input label="Example label" icon="envelope" className="signup-icon"/>
           </ModalBody>
           <ModalFooter>
-            <Button color="secondary" onClick={this.toggleClose}>Close</Button>{' '}
-            <Button color="primary" onClick={this.toggleSaveChanges}>Save changes</Button>
+            <Button color="deep-orange lighten-1" onClick={this.toggleClose}>Close</Button>{' '}
+            <Button color="mdb-color darken-2" onClick={this.toggleSaveChanges}>Save changes</Button>
           </ModalFooter>
         </Modal>
       </div>
