@@ -51,7 +51,7 @@ class UserArticle extends Component {
         <p>Enter the URL for your own article to see it's tone.</p>
         <Input
           type="text"
-          placeholder="Your text..."
+          label="Enter your url"
           onChange={this.getURL}
           onKeyPress={this.getTones}
         ></Input>

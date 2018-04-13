@@ -10,6 +10,7 @@ import UserTone from './components/userTone/UserTone'
 import UserArticle from './components/userArticle/UserArticle'
 import AdditionalNews from './components/news/AdditionalNews'
 import Footer from './components/footer/Footer'
+import FooterPage from './components/footer/FooterPage'
 
 import NavbarFeatures from './components/header/Navbar'
 
@@ -54,7 +55,7 @@ class App extends Component {
         <div className="top-navbar">
           <NavbarFeatures setSearchParameter={this.setSearchParameter}/>
         </div>
-        <div className='row'>
+        <div className='row hey-good-news'>
           <div className="col-md-8">
             <div className="top-news">
               <h1 className="news-header">Top News</h1>
@@ -67,7 +68,8 @@ class App extends Component {
             <UserTone />
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
+        <FooterPage />
       </div>
     )
   }
@@ -158,7 +160,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="hey-good-news">
         <BrowserRouter>
           <div>
             <Route exact path="/" component={IntroPage} />

@@ -34,7 +34,7 @@ class DropdownPage extends React.Component {
     return (
       <div>
         <Dropdown isOpen = { this.state.dropdownOpen } toggle = { this.toggle } onChange={this.test}>
-          <DropdownToggle caret color="warning">
+          <DropdownToggle caret color="mdb-color darken-2">
             {this.state.toneName}
           </DropdownToggle>
           <DropdownMenu>

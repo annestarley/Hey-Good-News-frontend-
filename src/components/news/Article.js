@@ -94,6 +94,16 @@ const Article = (props) => {
   let topLanguage = `${topLanguageToneName} ${(topLanguageTone * 100).toFixed(2)}%`
   let topSocial = `${topSocialToneName} ${(topSocialTone * 100).toFixed(2)}%`
 
+  let getdisplayed = () => {
+    if (props.chosenTone.length) {
+      if ((topEmotionalToneName || topLanguageToneName || topSocialToneName) !== props.chosenTone) {
+        displayed = 'no-display'
+
+      }
+    } else {
+      displayed = ''
+    }
+  }
 
   let displayed = ''
   if (props.chosenTone.length) {
@@ -136,46 +146,46 @@ const Article = (props) => {
 
   return (
     <div className={displayed}>
-      {/* <img className="source-img" src={props.urlToImage}/> */}
-      <a className="source-title" style={{display: "table-cell"}} href={props.url} target="_blank"><h4><strong>{props.title}</strong></h4></a>
-      <div className="source-time">
-        <TooltipsPage article={props}/> - Published {publishedTimeDifference}
-      </div>
-      <p className="description">{props.description}</p>
-      <div className="tones">
-        <p>
-          <span className="top-tones">Top tones:</span>
-          <span className="top-tones">
-            <Highlighter
-              highlightClassName="YourHighlightClass"
-              searchWords={[props.searchParameter]}
-              autoEscape={true}
-              textToHighlight={topEmotion}
-            />
-          </span>
-          <span className="top-tones">
-            <Highlighter
-              highlightClassName="YourHighlightClass"
-              searchWords={[props.searchParameter]}
-              autoEscape={true}
-              textToHighlight={topLanguage}
-            />
-          </span>
-          <span className="top-tones">
-            <Highlighter
-              highlightClassName="YourHighlightClass"
-              searchWords={[props.searchParameter]}
-              autoEscape={true}
-              textToHighlight={topSocial}
-            />
-          </span>
-        </p>
-        <div id="read-more-toggle">
-          <MoreTonesToggle article={props}/>
+      <div className="article-container" id="article-container">
+        {/* <img className="source-img" src={props.urlToImage}/> */}
+        <a className="source-title" style={{display: "table-cell"}} href={props.url} target="_blank"><h4><strong>{props.title}</strong></h4></a>
+        <div className="source-time">
+          <TooltipsPage article={props}/> - Published {publishedTimeDifference}
+        </div>
+        <p className="description">{props.description}</p>
+        <div className="tones">
+          <p>
+            <span className="top-tones">Top tones:</span>
+            <span className="top-tones">
+              <Highlighter
+                highlightClassName="YourHighlightClass"
+                searchWords={[props.searchParameter]}
+                autoEscape={true}
+                textToHighlight={topEmotion}
+              />
+            </span>
+            <span className="top-tones">
+              <Highlighter
+                highlightClassName="YourHighlightClass"
+                searchWords={[props.searchParameter]}
+                autoEscape={true}
+                textToHighlight={topLanguage}
+              />
+            </span>
+            <span className="top-tones">
+              <Highlighter
+                highlightClassName="YourHighlightClass"
+                searchWords={[props.searchParameter]}
+                autoEscape={true}
+                textToHighlight={topSocial}
+              />
+            </span>
+          </p>
+          <div id="read-more-toggle">
+            <MoreTonesToggle article={props}/>
+          </div>
         </div>
       </div>
-
-      <br></br>
     </div>
   )
 }

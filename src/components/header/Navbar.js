@@ -30,7 +30,7 @@ class NavbarFeatures extends React.Component {
     render() {
         return (
           <div>
-            <Navbar color="black" dark expand="md" scrolling>
+            <Navbar color="mdb-color darken-2" dark expand="md" scrolling>
                 {/* <NavbarBrand href="/">
                     <strong>Navbar</strong>
                 </NavbarBrand> */}

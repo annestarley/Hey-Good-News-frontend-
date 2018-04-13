@@ -10,13 +10,26 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #dd0000;
   /* background-color: #6464A3; */
-  background-color: #AF0000;
+  /* background-color: #AF0000; */
   /* background-color: #8C24CC; */
+  /* background-color: #984B43; */
+  /* background: #dcb239; */
+  /* background: #df744a; */
+  /* background: #94618e; */
+  /* background: #4484ce; */
+  /* background: #cd5360; */
+  /* background: #cf6776; */
+  /* background: #52658f; */
+  /* background: #ec0000; */
   height: 200px;
   padding: 20px;
   color: white;
+}
+
+.button-dropdown {
+  background: #49274a;
 }
 
 .top-navbar {
@@ -45,6 +58,10 @@
   /* font-family: 'Monofett', cursive; */
   /* font-family: 'Barrio', cursive; */
   /* font-family: 'Bungee Outline', cursive; */
+}
+
+.hey-good-news {
+  background: #f9f9f8;
 }
 
 .subtitle {
@@ -108,8 +125,12 @@
 
 .footer {
   text-align: center;
-  color: grey;
-  font-size: 0.8em;
+  /* color: grey;
+  font-size: 0.8em; */
+}
+
+.footer p {
+  margin-bottom: 0px;
 }
 
 .footer a {
@@ -133,16 +154,19 @@
 }
 
 .signup-tab {
-  background: black;
+  /* background: black;
   background: #ff7c5a;
-  background: black;
-  color: white;
+  background: black; */
+  /* background: #f9cf00; */
+  background: white;
+  color: black;
   margin: 5%;
   text-align: center;
-  border-radius: 5%;
+  /* border-radius: 5%; */
   font-size: 1.3em;
   padding: 5%;
-  margin-top: 15%;
+  margin-top: 50%;
+  border: lightgrey solid .5px;
 }
 
 .source-img {
@@ -154,7 +178,11 @@
 }
 
 .source-title:hover {
-  color: #AF0000;
+  color: #cf6776;;
+}
+
+.source-title:visited {
+  color: red;
 }
 
 .sort {
@@ -168,25 +196,35 @@
 
 .signup-tab h3, .user-tone h3, .user-article h3 {
   font-family: 'Fredericka the Great', cursive; /* not bad */
+  color: black;
+}
+
+.signup-tab h3 {
+  background: #ae4a2a;
 }
 
 .user-tone, .user-article {
-  background: black;
-  color: white;
+  /* background: black; */
+  color: #505050;
   padding: 5%;
   margin: 5%;
-  border-radius: 2%;
+  /* border-radius: 2%; */
   text-align: center;
+  border: .5px solid lightgrey;
 }
 
 .user-tone {
-  background: #ff6344;
-  background: black;
+  /* background: #ff6344;
+  background: black; */
+  /* background: #f19f4d; */
+  background: white;
 }
 
 .user-article {
-  background: #7ce6ac;
-  background: black;
+  /* background: #7ce6ac; */
+  /* background: black; */
+  /* background: #d9d9d9; */
+  background: white;
 }
 
 .YourHighlightClass {
@@ -243,6 +281,22 @@
   display: none;
 }
 
+.footer-icon:hover {
+  background: #cf6776;
+}
+
+/* #article-container {
+  margin: 5%;
+  border-bottom: .5px solid #DCDCDC;
+} */
+
+.article-container {
+  background: white;
+  border: lightgrey .5px solid;
+  padding: 2%;
+  margin: 0.5%;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -256,5 +310,9 @@
   .top-news {
     max-height: 800px;
     overflow: auto;
+  }
+
+  .signup-tab {
+    margin-top: 10%;
   }
 }
