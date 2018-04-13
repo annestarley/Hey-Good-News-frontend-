@@ -31,7 +31,7 @@ class SignupModal extends React.Component {
   render() {
     return (
       <div>
-        <Button color="primary" onClick={this.toggle}>Yes, please!</Button>
+        <Button color="mdb-color darken-2" onClick={this.toggle}>Yes, please!</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Daily Good News Sign Up</ModalHeader>
           <ModalBody>

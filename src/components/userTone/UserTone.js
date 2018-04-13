@@ -57,7 +57,7 @@ class UserTone extends Component {
           cols="10"
           onChange={this.getUserInput}
         >Your text here...</textarea>
-        {!this.state.userTone.anger ? <Button color="primary" onClick={this.getTones}>Okay, get tones!</Button> : null}
+        {!this.state.userTone.anger ? <Button color="mdb-color darken-2" onClick={this.getTones}>Okay, get tones!</Button> : null}
         {this.state.userTone.anger ? <UserToneCollapse userTone={this.state.userTone}/> : null}
         {this.state.loading ? <img src="Loading3.gif"/> : null}
       </div>

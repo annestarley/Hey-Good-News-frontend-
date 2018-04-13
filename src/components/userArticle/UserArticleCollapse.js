@@ -62,7 +62,7 @@ class UserArticleCollapse extends Component {
     return (
       <div>
         <div>
-          <Button color="primary"  onClick={this.toggle} style={{ marginBottom: "1rem" }}>See Results</Button>
+          <Button color="mdb-color darken-2"  onClick={this.toggle} style={{ marginBottom: "1rem" }}>See Results</Button>
           <Collapse isOpen={this.state.collapse}>
             <div className="user-article-results">
               <h5>Results For "{this.props.article.title}"</h5>

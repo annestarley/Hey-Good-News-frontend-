@@ -10,19 +10,7 @@
 }
 
 .App-header {
-  background-color: #dd0000;
-  /* background-color: #6464A3; */
-  /* background-color: #AF0000; */
-  /* background-color: #8C24CC; */
-  /* background-color: #984B43; */
-  /* background: #dcb239; */
-  /* background: #df744a; */
-  /* background: #94618e; */
-  /* background: #4484ce; */
-  /* background: #cd5360; */
-  /* background: #cf6776; */
-  /* background: #52658f; */
-  /* background: #ec0000; */
+  background-color: #2d3753;
   height: 200px;
   padding: 20px;
   color: white;
@@ -40,24 +28,7 @@
 
 .App-title {
   font-size: 2.75em;
-  /* font-family: 'Yeon Sung', cursive;
-  font-family: 'Jua', sans-serif;
-  font-family: 'Kirang Haerang', cursive;
-  font-family: 'Dokdo', cursive;
-  font-family: 'Black Han Sans', sans-serif;
-  font-family: 'Fredoka One', cursive;
-  font-family: 'Special Elite', cursive;
-  font-family: 'Rock Salt', cursive;
-  font-family: 'Baloo', cursive; */
   font-family: 'Fredericka the Great', cursive; /* not bad */
-  /* font-family: 'UnifrakturMaguntia', cursive; */
-  /* font-family: 'Frijole', cursive; /*Maybe */
-  /* font-family: 'Bungee Shade', cursive; */
-  /* font-family: 'Slackey', cursive; */
-  /* font-family: 'Zilla Slab Highlight', cursive; */
-  /* font-family: 'Monofett', cursive; */
-  /* font-family: 'Barrio', cursive; */
-  /* font-family: 'Bungee Outline', cursive; */
 }
 
 .hey-good-news {
@@ -77,11 +48,8 @@
   font-size: large;
 }
 
-/* My CSS */
 .top-news {
   margin: 5%;
-  /* max-height: 800px;
-  overflow: auto; */
 }
 
 .top-news h1 {
@@ -112,7 +80,6 @@
 #read-more-toggle {
   margin-top: -10px;
   margin-right: 2%;
-  /* margin-bottom: 10px; */
 }
 
 #other-tones {
@@ -125,8 +92,6 @@
 
 .footer {
   text-align: center;
-  /* color: grey;
-  font-size: 0.8em; */
 }
 
 .footer p {
@@ -154,19 +119,13 @@
 }
 
 .signup-tab {
-  /* background: black;
-  background: #ff7c5a;
-  background: black; */
-  /* background: #f9cf00; */
   background: white;
   color: black;
   margin: 5%;
   text-align: center;
-  /* border-radius: 5%; */
   font-size: 1.3em;
-  padding: 5%;
   margin-top: 50%;
-  border: lightgrey solid .5px;
+  border: solid #00A37E .5px;
 }
 
 .source-img {
@@ -178,10 +137,10 @@
 }
 
 .source-title:hover {
-  color: #cf6776;;
+  color: #00A37E;
 }
 
-.source-title:visited {
+.source-title a:visited {
   color: red;
 }
 
@@ -196,34 +155,34 @@
 
 .signup-tab h3, .user-tone h3, .user-article h3 {
   font-family: 'Fredericka the Great', cursive; /* not bad */
-  color: black;
+  color: white;
 }
 
-.signup-tab h3 {
-  background: #ae4a2a;
+.signup-tab h3, .user-tone h3, .user-article h3 {
+  background: #00A37E;
+  padding: 5%;
+}
+
+.signup-tab p, .user-tone p, .user-article p {
+  padding: 5%;
+}
+
+.signup-tab button, .user-tone button {
+  margin-bottom: 5%;
 }
 
 .user-tone, .user-article {
-  /* background: black; */
   color: #505050;
-  padding: 5%;
   margin: 5%;
-  /* border-radius: 2%; */
   text-align: center;
-  border: .5px solid lightgrey;
+  border: .5px solid #00A37E;
 }
 
 .user-tone {
-  /* background: #ff6344;
-  background: black; */
-  /* background: #f19f4d; */
   background: white;
 }
 
 .user-article {
-  /* background: #7ce6ac; */
-  /* background: black; */
-  /* background: #d9d9d9; */
   background: white;
 }
 
@@ -241,8 +200,9 @@
 }
 
 .input{
-    width:100%;
+    width:90%;
     height:100px;
+    color: #505050;
 }
 
 .intro-page {
@@ -250,8 +210,6 @@
 }
 
 .joy {
-  /* color: white; */
-  /* color: #FFFF66; */
   border: 2px solid #FFFF66;
   padding: 3px;
   border-radius: 25%;
@@ -281,20 +239,33 @@
   display: none;
 }
 
-.footer-icon:hover {
-  background: #cf6776;
+.footer-icon {
+  background: #00A37E;
 }
 
-/* #article-container {
-  margin: 5%;
-  border-bottom: .5px solid #DCDCDC;
-} */
+.footer-icon:hover {
+  background: #00E5B1;
+}
 
 .article-container {
   background: white;
   border: lightgrey .5px solid;
   padding: 2%;
   margin: 0.5%;
+}
+
+.article-input {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#tone-toggle-more {
+  color: #576690;
+  color: #009C78;
+}
+
+#tone-toggle-more:hover {
+  color: #00D1A1;
 }
 
 @keyframes App-logo-spin {

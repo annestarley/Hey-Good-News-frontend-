@@ -54,6 +54,7 @@ class UserArticle extends Component {
           label="Enter your url"
           onChange={this.getURL}
           onKeyPress={this.getTones}
+          className="article-input"
         ></Input>
         {this.state.article.title  ? <UserArticleCollapse article={this.state.article}/> : null}
         {this.state.loading ? <img src="Loading3.gif"/> : null}
