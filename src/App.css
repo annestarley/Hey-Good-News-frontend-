@@ -137,7 +137,7 @@
 }
 
 .source-title:hover {
-  color: #00A37E;
+  color: #ff7256;
 }
 
 .source-title a:visited {
@@ -216,19 +216,31 @@
 }
 
 .user-article-results p {
-  margin-bottom: -5px;
+  margin-bottom: -18px;
   text-align: left;
+  font-size: .9em;
 }
 
 .user-article-tone {
   margin-left: 5%;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .top-user-tones {
-  border: white solid 1px;
+  border: #ff7256 solid 1px;
+  background: #ff7256;
+  border-radius: 2%;
+  color: white;
   padding: 5%;
-  margin: 2%;
+  margin: 5%;
   font-size: 1.1em;
+}
+
+.top-user-tones p {
+  /* margin-top: 0px;
+  padding-top: 0px; */
+  /* padding-bottom: 1px; */
 }
 
 .user-article-tones {
@@ -266,6 +278,24 @@
 
 #tone-toggle-more:hover {
   color: #00D1A1;
+}
+
+.newspaper-icon {
+  height: 70px;
+}
+
+textarea:focus:not([readonly]) + label {
+    color: #ff7256;
+}
+
+.active {
+  color: #ff7256;
+}
+
+.article-input-div {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5%;
 }
 
 @keyframes App-logo-spin {

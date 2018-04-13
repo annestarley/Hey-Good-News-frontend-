@@ -68,9 +68,9 @@ class UserArticleCollapse extends Component {
               <h5>Results For "{this.props.article.title}"</h5>
               <div className="top-user-tones">
                 <p><strong>Top Tones:</strong></p>
-                <p className="user-article-tone"><strong>{topEmotionalToneName} {(topEmotionalTone * 100).toFixed(2)}%</strong></p>
-                <p className="user-article-tone"><strong>{topLanguageToneName} {(topLanguageTone * 100).toFixed(2)}%</strong></p>
-                <p className="user-article-tone"><strong>{topSocialToneName} {(topSocialTone * 100).toFixed(2)}%</strong></p>
+                <p className="user-article-tone"><strong>{topEmotionalToneName}: {(topEmotionalTone * 100).toFixed(2)}%</strong></p>
+                <p className="user-article-tone"><strong>{topLanguageToneName}: {(topLanguageTone * 100).toFixed(2)}%</strong></p>
+                <p className="user-article-tone"><strong>{topSocialToneName}: {(topSocialTone * 100).toFixed(2)}%</strong></p>
               </div>
               <div className="user-article-tones">
                 <p><strong>Emotional Tones:</strong></p>

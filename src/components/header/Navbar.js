@@ -32,7 +32,7 @@ class NavbarFeatures extends React.Component {
           <div>
             <Navbar color="mdb-color darken-2" dark expand="md" scrolling>
                 {/* <NavbarBrand href="/">
-                    <strong>Navbar</strong>
+                    <img className="newspaper-icon" src="newspaper-icon.png"/>
                 </NavbarBrand> */}
                 { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>

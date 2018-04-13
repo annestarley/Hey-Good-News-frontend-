@@ -49,13 +49,15 @@ class UserArticle extends Component {
       <div className="user-article">
         <h3>Don't see the article you are interested in?</h3>
         <p>Enter the URL for your own article to see it's tone.</p>
-        <Input
-          type="text"
-          label="Enter your url"
-          onChange={this.getURL}
-          onKeyPress={this.getTones}
-          className="article-input"
-        ></Input>
+        <div className="article-input-div">
+          <Input
+            type="text"
+            label="Enter your url"
+            onChange={this.getURL}
+            onKeyPress={this.getTones}
+            className="article-input"
+          ></Input>
+        </div>
         {this.state.article.title  ? <UserArticleCollapse article={this.state.article}/> : null}
         {this.state.loading ? <img src="Loading3.gif"/> : null}
       </div>
