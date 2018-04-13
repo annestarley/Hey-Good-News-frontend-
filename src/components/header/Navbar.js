@@ -9,8 +9,7 @@ class NavbarFeatures extends React.Component {
         this.state = {
             collapse: false,
             isWideEnough: false,
-            dropdownOpen: false,
-            active: 'top-news'
+            dropdownOpen: false
         };
     this.onClick = this.onClick.bind(this);
     this.toggle = this.toggle.bind(this);
@@ -28,14 +27,6 @@ class NavbarFeatures extends React.Component {
         });
     }
 
-    getActive = (e) => {
-      debugger
-      console.log(e.target.innerText)
-      this.setState({
-        active: e.target.innerText
-      })
-    }
-
     render() {
         console.log('active', this.state.active)
         return (
@@ -47,27 +38,27 @@ class NavbarFeatures extends React.Component {
                 { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>
                     <NavbarNav left>
-                      <NavItem active={this.props.active === 'top-news' ? true : false}>
-                          <NavLink onClick={this.getActive} to="/top-news">Home</NavLink>
+                      <NavItem active={this.props.active === 'home' ? true : false}>
+                          <NavLink to="/top-news">Home</NavLink>
                       </NavItem>
                       {/* {(this.state.active === 'Science') ? active : ''} */}
                       <NavItem active={this.props.active === 'science' ? true : false}>
-                          <NavLink to="/science" onClick={this.getActive}>Science</NavLink>
+                          <NavLink to="/science">Science</NavLink>
                       </NavItem>
                       <NavItem active={this.props.active === 'sports' ? true : false}>
-                          <NavLink to="/sports" onClick={this.getActive}>Sports</NavLink>
+                          <NavLink to="/sports">Sports</NavLink>
                       </NavItem>
                       <NavItem active={this.props.active === 'business' ? true : false}>
-                          <NavLink to="/business" onClick={this.getActive}>Business</NavLink>
+                          <NavLink to="/business">Business</NavLink>
                       </NavItem>
                       <NavItem active={this.props.active === 'entertainment' ? true : false}>
-                          <NavLink to="/entertainment" onClick={this.getActive}>Entertainment</NavLink>
+                          <NavLink to="/entertainment">Entertainment</NavLink>
                       </NavItem>
                       <NavItem active={this.props.active === 'health' ? true : false}>
-                          <NavLink to="/health" onClick={this.getActive}>Health</NavLink>
+                          <NavLink to="/health">Health</NavLink>
                       </NavItem>
                       <NavItem active={this.props.active === 'technology' ? true : false}>
-                          <NavLink to="/technology" onClick={this.getActive}>Technology</NavLink>
+                          <NavLink to="/technology">Technology</NavLink>
                       </NavItem>
                       <NavItem>
                           <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
