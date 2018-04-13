@@ -26,10 +26,22 @@
   z-index: 7;
 }
 
+.navbar-brand-style {
+  font-family: 'Fredericka the Great', cursive; /* not bad */
+  /* border: white .25px solid; */
+  padding: .5%;
+  display: none;
+}
+
 .App-title {
   font-size: 2.75em;
   font-family: 'Fredericka the Great', cursive; /* not bad */
 }
+
+/* .App-title h1 {
+  border: white .25px solid;
+  padding: .5%;
+} */
 
 .hey-good-news {
   background: #f9f9f8;
@@ -264,6 +276,14 @@
   border: lightgrey .5px solid;
   padding: 2%;
   margin: 0.5%;
+}
+
+.article-container-additional {
+  background: white;
+  border: lightgrey .5px solid;
+  padding: 2%;
+  margin: 0.5%;
+  text-align: left;
 }
 
 .article-input {

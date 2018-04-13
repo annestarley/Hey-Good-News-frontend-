@@ -68,7 +68,6 @@ class App extends Component {
             <UserTone />
           </div>
         </div>
-        {/* <Footer /> */}
         <FooterPage />
       </div>
     )

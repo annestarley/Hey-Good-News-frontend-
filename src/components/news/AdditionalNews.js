@@ -15,31 +15,29 @@ class AdditionalNews extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.getTopArticles()
-  // }
-  //
-  // getTopArticles() {
-  //   debugger
-  //   axios.get(`${backendURL}/${this.props.category}`)
-  //     .then(res => {
-  //       debugger
-  //       console.log(res.data)
-  //       this.setState({
-  //         articles: res.data,
-  //         loading: false
-  //       })
-  //     })
-  //     .catch(err => {
-  //       debugger
-  //       console.log(err);
-  //     })
-  // }
+  componentDidMount() {
+    this.getTopArticles()
+  }
+
+  getTopArticles() {
+    axios.get(`${backendURL}/${this.props.category}`)
+      .then(res => {
+        console.log(res.data)
+        console.log('RES', res)
+        this.setState({
+          articles: res.data,
+          loading: false
+        })
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
 
   render () {
     return (
       <div className="top-news additional-news">
-        <AdditionalNewsArticleList articles={this.state.articles} searchParameter={this.props.searchParameter} />
+        {this.state.articles.length ? <AdditionalNewsArticleList articles={this.state.articles} searchParameter={this.props.searchParameter} /> : null}
         {this.state.loading ? <img src="Loading3.gif" className="additional-news-loading"/> : null}
         {/* <TempArticleList searchParameter={this.props.searchParameter} />
         <TempArticleList searchParameter={this.props.searchParameter} />

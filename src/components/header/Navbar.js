@@ -28,12 +28,12 @@ class NavbarFeatures extends React.Component {
     }
 
     render() {
-        console.log('active', this.state.active)
         return (
           <div>
             <Navbar color="mdb-color darken-2" dark expand="md" scrolling>
-                {/* <NavbarBrand href="/">
-                    <img className="newspaper-icon" src="newspaper-icon.png"/>
+                {/* <NavbarBrand className="navbar-brand-style" href="/"> */}
+                    {/* <img className="newspaper-icon" src="newspaper-icon.png"/> */}
+                    {/* Hey, Good News
                 </NavbarBrand> */}
                 { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>
@@ -64,7 +64,7 @@ class NavbarFeatures extends React.Component {
                           <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                           <DropdownToggle nav caret>Dropdown</DropdownToggle>
                           <DropdownMenu>
-                              <DropdownItem href="#">Need some good news?</DropdownItem>
+                              <DropdownItem href="#need-some-good-news">Need some good news?</DropdownItem>
                               <DropdownItem href="#">Don't see your article?</DropdownItem>
                               <DropdownItem href="#">Find your tone!</DropdownItem>
                           </DropdownMenu>

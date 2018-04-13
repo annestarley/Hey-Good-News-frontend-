@@ -1,118 +1,117 @@
 import React from 'react'
 import Highlighter from 'react-highlight-words'
 import MoreTonesToggle from './MoreTonesToggle'
-import TooltipsPage from './ToolTips'
 
 const AdditionalNewsArticle = (props) => {
-  let topEmotionalTone = props.tone.emotion.anger
-  let topEmotionalToneName = 'anger'
-  if (parseFloat(props.tone.emotion.disgust) > parseFloat(topEmotionalTone)) {
-    topEmotionalTone = props.tone.emotion.disgust
-    topEmotionalToneName = 'disgust'
-  }
-  if (parseFloat(props.tone.emotion.fear) > parseFloat(topEmotionalTone)) {
-    topEmotionalTone = props.tone.emotion.fear
-    topEmotionalToneName = 'fear'
-  }
-  if (parseFloat(props.tone.emotion.joy) > parseFloat(topEmotionalTone)) {
-    topEmotionalTone = props.tone.emotion.joy
-    topEmotionalToneName = 'joy'
-  }
-
-  // let topEmotionalTone = props.anger
+  // let topEmotionalTone = props.tone.emotion.anger
   // let topEmotionalToneName = 'anger'
-  // if (parseFloat(props.disgust) > parseFloat(topEmotionalTone)) {
-  //   topEmotionalTone = props.disgust
+  // if (parseFloat(props.tone.emotion.disgust) > parseFloat(topEmotionalTone)) {
+  //   topEmotionalTone = props.tone.emotion.disgust
   //   topEmotionalToneName = 'disgust'
   // }
-  // if (parseFloat(props.fear) > parseFloat(topEmotionalTone)) {
-  //   topEmotionalTone = props.fear
+  // if (parseFloat(props.tone.emotion.fear) > parseFloat(topEmotionalTone)) {
+  //   topEmotionalTone = props.tone.emotion.fear
   //   topEmotionalToneName = 'fear'
   // }
-  // if (parseFloat(props.joy) > parseFloat(topEmotionalTone)) {
-  //   topEmotionalTone = props.joy
+  // if (parseFloat(props.tone.emotion.joy) > parseFloat(topEmotionalTone)) {
+  //   topEmotionalTone = props.tone.emotion.joy
   //   topEmotionalToneName = 'joy'
   // }
 
-  let topLanguageTone = props.tone.language.analytical
-  let topLanguageToneName = 'analytical'
-  if (parseFloat(props.tone.language.confident) > parseFloat(topLanguageTone)) {
-    topLanguageTone = props.tone.language.confident
-    topLanguageToneName = 'confident'
+  let topEmotionalTone = props.anger
+  let topEmotionalToneName = 'anger'
+  if (parseFloat(props.disgust) > parseFloat(topEmotionalTone)) {
+    topEmotionalTone = props.disgust
+    topEmotionalToneName = 'disgust'
   }
-  if (parseFloat(props.tone.language.tentative) > parseFloat(topLanguageTone)) {
-    topLanguageTone = props.tone.language.tentative
-    topLanguageToneName = 'tentative'
+  if (parseFloat(props.fear) > parseFloat(topEmotionalTone)) {
+    topEmotionalTone = props.fear
+    topEmotionalToneName = 'fear'
+  }
+  if (parseFloat(props.joy) > parseFloat(topEmotionalTone)) {
+    topEmotionalTone = props.joy
+    topEmotionalToneName = 'joy'
   }
 
-  // let topLanguageTone = props.analytical
+  // let topLanguageTone = props.tone.language.analytical
   // let topLanguageToneName = 'analytical'
-  // if (parseFloat(props.confident) > parseFloat(topLanguageTone)) {
-  //   topLanguageTone = props.confident
+  // if (parseFloat(props.tone.language.confident) > parseFloat(topLanguageTone)) {
+  //   topLanguageTone = props.tone.language.confident
   //   topLanguageToneName = 'confident'
   // }
-  // if (parseFloat(props.tentative) > parseFloat(topLanguageTone)) {
-  //   topLanguageTone = props.tentative
+  // if (parseFloat(props.tone.language.tentative) > parseFloat(topLanguageTone)) {
+  //   topLanguageTone = props.tone.language.tentative
   //   topLanguageToneName = 'tentative'
   // }
 
-  let topSocialTone = props.tone.social.agreeableness
-  let topSocialToneName = 'agreeableness'
-  if (parseFloat(props.tone.social.conscientiousness) > parseFloat(topSocialTone)) {
-    topSocialTone = props.tone.social.conscientiousness
-    topSocialToneName = 'conscientiousness'
+  let topLanguageTone = props.analytical
+  let topLanguageToneName = 'analytical'
+  if (parseFloat(props.confident) > parseFloat(topLanguageTone)) {
+    topLanguageTone = props.confident
+    topLanguageToneName = 'confident'
   }
+  if (parseFloat(props.tentative) > parseFloat(topLanguageTone)) {
+    topLanguageTone = props.tentative
+    topLanguageToneName = 'tentative'
+  }
+
+  // let topSocialTone = props.tone.social.agreeableness
+  // let topSocialToneName = 'agreeableness'
+  // if (parseFloat(props.tone.social.conscientiousness) > parseFloat(topSocialTone)) {
+  //   topSocialTone = props.tone.social.conscientiousness
+  //   topSocialToneName = 'conscientiousness'
+  // }
   // if (parseFloat(props.tone.social.emotionalRange) > parseFloat(topSocialTone)) {
   //   topSocialTone = props.tone.social.emotionalRange
   //   topSocialToneName = 'emotional range'
   // }
-  if (parseFloat(props.tone.social.extraversion) > parseFloat(topSocialTone)) {
-    topSocialTone = props.tone.social.extraversion
-    topSocialToneName = 'extraversion'
-  }
-  if (parseFloat(props.tone.social.openness) > parseFloat(topSocialTone)) {
-    topSocialTone = props.tone.social.openness
-    topSocialToneName = 'openness'
-  }
-
-  // let topSocialTone = props.agreeableness
-  // let topSocialToneName = 'agreeableness'
-  // if (parseFloat(props.conscientiousness) > parseFloat(topSocialTone)) {
-  //   topSocialTone = props.conscientiousness
-  //   topSocialToneName = 'conscientiousness'
-  // }
-  // if (parseFloat(props.extraversion) > parseFloat(topSocialTone)) {
-  //   topSocialTone = props.extraversion
+  // if (parseFloat(props.tone.social.extraversion) > parseFloat(topSocialTone)) {
+  //   topSocialTone = props.tone.social.extraversion
   //   topSocialToneName = 'extraversion'
   // }
-  // if (parseFloat(props.openness) > parseFloat(topSocialTone)) {
-  //   topSocialTone = props.openness
+  // if (parseFloat(props.tone.social.openness) > parseFloat(topSocialTone)) {
+  //   topSocialTone = props.tone.social.openness
   //   topSocialToneName = 'openness'
   // }
+
+  let topSocialTone = props.agreeableness
+  let topSocialToneName = 'agreeableness'
+  if (parseFloat(props.conscientiousness) > parseFloat(topSocialTone)) {
+    topSocialTone = props.conscientiousness
+    topSocialToneName = 'conscientiousness'
+  }
+  if (parseFloat(props.extraversion) > parseFloat(topSocialTone)) {
+    topSocialTone = props.extraversion
+    topSocialToneName = 'extraversion'
+  }
+  if (parseFloat(props.openness) > parseFloat(topSocialTone)) {
+    topSocialTone = props.openness
+    topSocialToneName = 'openness'
+  }
 
   let topEmotion = `${topEmotionalToneName} ${(topEmotionalTone * 100).toFixed(2)}%`
   let topLanguage = `${topLanguageToneName} ${(topLanguageTone * 100).toFixed(2)}%`
   let topSocial = `${topSocialToneName} ${(topSocialTone * 100).toFixed(2)}%`
 
-  let getdisplayed = () => {
-    if (props.chosenTone.length) {
-      if ((topEmotionalToneName || topLanguageToneName || topSocialToneName) !== props.chosenTone) {
-        displayed = 'no-display'
+  // let getdisplayed = () => {
+  //   if (props.chosenTone.length) {
+  //     if ((topEmotionalToneName || topLanguageToneName || topSocialToneName) !== props.chosenTone) {
+  //       displayed = 'no-display'
+  //
+  //     }
+  //   } else {
+  //     displayed = ''
+  //   }
+  // }
 
-      }
-    } else {
-      displayed = ''
-    }
-  }
-
-  let displayed = ''
-  if (props.chosenTone.length) {
-    if ((topEmotionalToneName || topLanguageToneName || topSocialToneName) !== props.chosenTone) {
-      displayed = 'no-display'
-    }
-  } else {
-    displayed = ''
-  }
+  // let displayed = ''
+  // if (props.chosenTone.length) {
+  //   if ((topEmotionalToneName || topLanguageToneName || topSocialToneName) !== props.chosenTone) {
+  //     displayed = 'no-display'
+  //   }
+  // } else {
+  //   displayed = ''
+  // }
 
   let date = new Date().toUTCString().split(' ')
   let currentTime = date[4].split(':')
@@ -145,12 +144,12 @@ const AdditionalNewsArticle = (props) => {
   let publishedTimeDifference = `${hoursFinal} ${minutes} ${seconds} ago`
 
   return (
-    <div className={displayed}>
-      <div className="article-container" id="article-container">
+    <div>
+      <div className="article-container-additional" id="article-container">
         {/* <img className="source-img" src={props.urlToImage}/> */}
         <a className="source-title" style={{display: "table-cell"}} href={props.url} target="_blank"><h4><strong>{props.title}</strong></h4></a>
         <div className="source-time">
-          <TooltipsPage article={props}/> - Published {publishedTimeDifference}
+          {props.source.name} - Published {publishedTimeDifference}
         </div>
         <p className="description">{props.description}</p>
         <div className="tones">
