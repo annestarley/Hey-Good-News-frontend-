@@ -302,10 +302,17 @@ textarea:focus:not([readonly]) + label {
   color: #ff7256;
 }
 
-/* .modal-header, .modal-footer {
-  background: #00c598;
-  color: white;
-} */
+.additional-news {
+  min-height: 225px;
+  margin: auto;
+  text-align: center;
+
+}
+
+.additional-news-loading {
+  margin: auto;
+  text-align: center;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

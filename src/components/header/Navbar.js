@@ -9,7 +9,8 @@ class NavbarFeatures extends React.Component {
         this.state = {
             collapse: false,
             isWideEnough: false,
-            dropdownOpen: false
+            dropdownOpen: false,
+            active: 'top-news'
         };
     this.onClick = this.onClick.bind(this);
     this.toggle = this.toggle.bind(this);
@@ -27,7 +28,16 @@ class NavbarFeatures extends React.Component {
         });
     }
 
+    getActive = (e) => {
+      debugger
+      console.log(e.target.innerText)
+      this.setState({
+        active: e.target.innerText
+      })
+    }
+
     render() {
+        console.log('active', this.state.active)
         return (
           <div>
             <Navbar color="mdb-color darken-2" dark expand="md" scrolling>
@@ -37,35 +47,35 @@ class NavbarFeatures extends React.Component {
                 { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>
                     <NavbarNav left>
-                      <NavItem active>
-                          <NavLink to="/top-news">Home</NavLink>
+                      <NavItem active={this.props.active === 'top-news' ? true : false}>
+                          <NavLink onClick={this.getActive} to="/top-news">Home</NavLink>
                       </NavItem>
-                      <NavItem>
-                          <NavLink to="/science">Science</NavLink>
+                      {/* {(this.state.active === 'Science') ? active : ''} */}
+                      <NavItem active={this.props.active === 'science' ? true : false}>
+                          <NavLink to="/science" onClick={this.getActive}>Science</NavLink>
                       </NavItem>
-                      <NavItem>
-                          <NavLink to="/sports">Sports</NavLink>
+                      <NavItem active={this.props.active === 'sports' ? true : false}>
+                          <NavLink to="/sports" onClick={this.getActive}>Sports</NavLink>
                       </NavItem>
-                      <NavItem>
-                          <NavLink to="/business">Business</NavLink>
+                      <NavItem active={this.props.active === 'business' ? true : false}>
+                          <NavLink to="/business" onClick={this.getActive}>Business</NavLink>
                       </NavItem>
-                      <NavItem>
-                          <NavLink to="/entertainment">Entertainment</NavLink>
+                      <NavItem active={this.props.active === 'entertainment' ? true : false}>
+                          <NavLink to="/entertainment" onClick={this.getActive}>Entertainment</NavLink>
                       </NavItem>
-                      <NavItem>
-                          <NavLink to="/health">Health</NavLink>
+                      <NavItem active={this.props.active === 'health' ? true : false}>
+                          <NavLink to="/health" onClick={this.getActive}>Health</NavLink>
                       </NavItem>
-                      <NavItem>
-                          <NavLink to="/technology">Technology</NavLink>
+                      <NavItem active={this.props.active === 'technology' ? true : false}>
+                          <NavLink to="/technology" onClick={this.getActive}>Technology</NavLink>
                       </NavItem>
                       <NavItem>
                           <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                           <DropdownToggle nav caret>Dropdown</DropdownToggle>
                           <DropdownMenu>
                               <DropdownItem href="#">Need some good news?</DropdownItem>
-                              <DropdownItem href="#">Find your tone!</DropdownItem>
                               <DropdownItem href="#">Don't see your article?</DropdownItem>
-                              <DropdownItem href="#">Something else here</DropdownItem>
+                              <DropdownItem href="#">Find your tone!</DropdownItem>
                           </DropdownMenu>
                           </Dropdown>
                       </NavItem>

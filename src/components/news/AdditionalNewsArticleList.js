@@ -1,5 +1,5 @@
 import React from 'react'
-import AdditionalArticle from './Article'
+import AdditionalNewsArticle from './AdditionalNewsArticle'
 
 const AdditionalArticleList = (props) => {
   // if there are less than 10 articles there might be issues
@@ -11,7 +11,7 @@ const AdditionalArticleList = (props) => {
           if (i === (props.articles.length - 1)) {
 
           }
-          return <Article
+          return <AdditionalNewsArticle
             {...article}
             articles={props.articles}
             key={i}
