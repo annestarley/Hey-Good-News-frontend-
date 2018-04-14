@@ -334,6 +334,14 @@ textarea:focus:not([readonly]) + label {
   text-align: center;
 }
 
+.user-tone h3:hover, .user-article h3:hover {
+  background: #00CF9F;
+}
+
+.user-tone:hover, .user-article:hover {
+  border: solid .5px #00CF9F;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

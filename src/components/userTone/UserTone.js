@@ -44,7 +44,7 @@ class UserTone extends Component {
 
   render () {
     return (
-      <div className="user-tone">
+      <div className="user-tone" id="find-your-tone">
         <h3>Find Your Tone!</h3>
         {/* <p>Wanna find out your overall tone? Enter your twitter handle and we'll scan your tweets for tone and a bonus personality tester!</p> */}
         {/* <TwitterCollapse /> */}

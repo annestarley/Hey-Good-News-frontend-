@@ -46,7 +46,7 @@ class UserArticle extends Component {
 
   render () {
     return (
-      <div className="user-article">
+      <div className="user-article" id="dont-see-your-article">
         <h3>Don't see the article you are interested in?</h3>
         <p>Enter the URL for your own article to see it's tone.</p>
         <div className="article-input-div">

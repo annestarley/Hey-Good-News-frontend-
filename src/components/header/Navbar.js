@@ -65,8 +65,8 @@ class NavbarFeatures extends React.Component {
                           <DropdownToggle nav caret>Dropdown</DropdownToggle>
                           <DropdownMenu>
                               <DropdownItem href="#need-some-good-news">Need some good news?</DropdownItem>
-                              <DropdownItem href="#">Don't see your article?</DropdownItem>
-                              <DropdownItem href="#">Find your tone!</DropdownItem>
+                              <DropdownItem href="#dont-see-your-article">Don't see your article?</DropdownItem>
+                              <DropdownItem href="#find-your-tone">Find your tone!</DropdownItem>
                           </DropdownMenu>
                           </Dropdown>
                       </NavItem>
