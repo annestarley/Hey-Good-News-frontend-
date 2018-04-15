@@ -162,8 +162,8 @@ class App extends Component {
       <div className="hey-good-news">
         <BrowserRouter>
           <div>
-            <Route exact path="/" component={IntroPage} />
-            <Route path="/top-news" render={() => {
+            {/* <Route exact path="/" component={IntroPage} /> */}
+            <Route exact path="/" render={() => {
               return this.topNews()
             }}/>
             <Route path="/science" render={() => {

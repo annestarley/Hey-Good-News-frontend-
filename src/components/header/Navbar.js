@@ -39,7 +39,7 @@ class NavbarFeatures extends React.Component {
                 <Collapse isOpen = { this.state.collapse } navbar>
                     <NavbarNav left>
                       <NavItem active={this.props.active === 'home' ? true : false}>
-                          <NavLink to="/top-news">Home</NavLink>
+                          <NavLink to="/">Home</NavLink>
                       </NavItem>
                       {/* {(this.state.active === 'Science') ? active : ''} */}
                       <NavItem active={this.props.active === 'science' ? true : false}>

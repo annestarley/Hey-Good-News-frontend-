@@ -140,6 +140,10 @@
   border: solid #00A37E .5px;
 }
 
+.signup-tab h3:hover {
+  background: #00CF9F;
+}
+
 .source-img {
   height: 50px;
 }
@@ -241,12 +245,14 @@
 
 .top-user-tones {
   border: #ff7256 solid 1px;
-  background: #ff7256;
+  /* background: #ff7256; */
   border-radius: 2%;
-  color: white;
+  /* color: white; */
   padding: 5%;
+  padding-top: 0;
   margin: 5%;
   font-size: 1.1em;
+  /* box-shadow: 0 0 1px 1px #C75943; */
 }
 
 .top-user-tones p {
@@ -348,7 +354,7 @@ textarea:focus:not([readonly]) + label {
 }
 
 @media only screen and (max-width: 900px) {
-  .subsubtitle {
+  .subsubtitle, .subtitle {
     display: none;
   }
 
