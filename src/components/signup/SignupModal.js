@@ -18,21 +18,18 @@ class SignupModal extends React.Component {
   }
 
   toggle() {
-    console.log('togge ran')
     this.setState({
       modal: !this.state.modal
     });
   }
 
   getUsername = (e) => {
-    console.log('username', e.target.value)
     this.setState({
       username: e.target.value
     })
   }
 
   getEmail = (e) => {
-    console.log('email', e.target.value)
     this.setState({
       email: e.target.value
     })
@@ -42,7 +39,6 @@ class SignupModal extends React.Component {
     console.log('post user ran!')
     axios.post(`${backendURL}/userInfo/`, {username: this.state.username, email: this.state.email})
       .then(res => {
-        console.log('response from backend', res)
         this.toggle()
       })
       .catch(err => {
