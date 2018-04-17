@@ -3,7 +3,7 @@ import {Input, Button} from 'mdbreact'
 import UserToneCollapse from './UserToneCollapse'
 import axios from 'axios'
 
-const backendURL = 'http://localhost:8000'
+const backendURL = 'https://hey-good-news.herokuapp.com'
 
 class UserTone extends Component {
   constructor (props) {

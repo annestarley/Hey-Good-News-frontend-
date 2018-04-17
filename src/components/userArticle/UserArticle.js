@@ -4,7 +4,7 @@ import axios from 'axios'
 import UserArticleCollapse from './UserArticleCollapse'
 // import LoadingAnimation from './LoadingAnimation'
 
-const backendURL = 'http://localhost:8000'
+const backendURL = 'https://hey-good-news.herokuapp.com'
 
 class UserArticle extends Component {
   constructor(props) {

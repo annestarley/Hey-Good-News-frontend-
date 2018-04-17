@@ -14,7 +14,7 @@ import FooterPage from './components/footer/FooterPage'
 
 import NavbarFeatures from './components/header/Navbar'
 
-const backendURL = 'http://localhost:8000'
+const backendURL = 'https://hey-good-news.herokuapp.com'
 
 class App extends Component {
   constructor(props) {

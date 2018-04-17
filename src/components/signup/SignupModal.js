@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, Modal, ModalBody, ModalHeader, ModalFooter, Input } from 'mdbreact';
 import axios from 'axios'
 
-const backendURL = 'http://localhost:8000'
+const backendURL = 'https://hey-good-news.herokuapp.com'
 
 class SignupModal extends React.Component {
   constructor(props) {

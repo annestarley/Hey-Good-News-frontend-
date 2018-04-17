@@ -4,7 +4,7 @@ import axios from 'axios'
 import TempArticleList from './TempArticleList'
 import AdditionalNewsArticleList from './AdditionalNewsArticleList'
 
-const backendURL = 'http://localhost:8000'
+const backendURL = 'https://hey-good-news.herokuapp.com'
 
 class AdditionalNews extends Component {
   constructor(props) {
