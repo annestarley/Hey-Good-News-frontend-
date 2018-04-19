@@ -28,7 +28,6 @@ class TopNews extends React.Component {
   render () {
     return (
       <div>
-        {console.log(this.state)}
         <div className="sort">
           <h4>Filter the news by emotional tone?</h4>
           <p>Find all news articles with the chosen emotional tone as a top tone.</p>
