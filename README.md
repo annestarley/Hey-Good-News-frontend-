@@ -4,8 +4,8 @@
 ### This website is responsive and works on both mobile and web browsers.  
 ![mobile](https://github.com/annestarley/Hey-Good-News-frontend-/blob/master/public/mobile-view.gif)
 ![web](https://github.com/annestarley/Hey-Good-News-frontend-/blob/master/public/web-view.png)
-![demo video](https://github.com/annestarley/Hey-Good-News-frontend-/blob/master/public/Capstone%20video.mov)
-
+  
+Link to demo video: https://www.youtube.com/watch?v=OQLBidwshts&t=15s
 
   
 **Core-Technologies**: React, React Router, Node.js, Express.js, Knex, PostgreSQL, axios, Heroku Scheduler, mdbreact  
