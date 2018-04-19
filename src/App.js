@@ -22,6 +22,7 @@ class App extends Component {
     this.state = {
       articles: [],
       searchParameter: '',
+      loading: true,
     }
   }
 
@@ -33,7 +34,8 @@ class App extends Component {
     axios.get(`${backendURL}/top-articles`)
       .then(res => {
         this.setState({
-          articles: res.data
+          articles: res.data,
+          loading: false
         })
       })
       .catch(err => {
@@ -60,6 +62,9 @@ class App extends Component {
             <div className="top-news">
               <h1 className="news-header">Top News</h1>
               <TopNews articles={this.state.articles} searchParameter={this.state.searchParameter}/>
+              <div className="top-news-loading">
+                {this.state.loading ? <img src="Loading3.gif" className="additional-news-loading"/> : null}
+              </div>
             </div>
           </div>
           <div className="col-md-3">

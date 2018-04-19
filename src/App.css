@@ -349,6 +349,11 @@ textarea:focus:not([readonly]) + label {
   border: solid .5px #00CF9F;
 }
 
+.top-news-loading {
+  margin: auto;
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
