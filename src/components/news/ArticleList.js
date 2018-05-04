@@ -3,7 +3,7 @@ import Article from './Article'
 
 const ArticleList = (props) => {
   // if there are less than 10 articles there might be issues
-  let articles = props.articles.slice(props.articles.length - 10).reverse()
+  let articles = props.articles.slice(props.articles.length - 10)
   return (
     <div>
       {
